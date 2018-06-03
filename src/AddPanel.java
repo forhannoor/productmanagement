@@ -1,77 +1,78 @@
-import java.awt.Component;
-import java.awt.Graphics;
 import java.awt.Image;
-
-import javax.swing.DefaultListModel;
-import javax.swing.Icon;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.File;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFileChooser;
 import javax.swing.JLabel;
-import javax.swing.JList;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import javax.swing.JScrollPane;
 import javax.swing.JTextField;
-import javax.swing.event.ListSelectionEvent;
-import javax.swing.event.ListSelectionListener;
 
-public class AddPanel extends JPanel implements ListSelectionListener{
+public class AddPanel extends JPanel implements ActionListener{
 	private JTextField name;
 	private JTextField category;
 	private JTextField brand;
 	private JTextField price;
 	private JTextField unit;
+	private JButton add;
+	private JButton upload;
 	private JLabel img;
-	private JList<String> list;
+	private JLabel fileName;
 	private Database db;
 	
 	public AddPanel(Database db) {
 		this.db = db;
-		initProductList();
 		initGui();
 	}
 	
 	public void initGui(){
 		setLayout(null);
 		
-		list.addListSelectionListener(this);
-		JScrollPane pane = new JScrollPane(list);
-		pane.setBounds(5, 5, 170, 200);
-		pane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
-		pane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
+		add = new JButton("ADD");
+		add.setBounds(335, 450, 115, 30);
+		add.addActionListener(this);
 		
-		add(pane);
+		upload = new JButton("Browse");
+		upload.setBounds(200, 450, 115, 30);
+		upload.addActionListener(this);
 		
 		JLabel j1 = new JLabel("Name");
-		j1.setBounds(220, 5, 100, 20);
+		j1.setBounds(5, 5, 100, 20);
 		
 		name = new JTextField();
-		name.setBounds(320, 5, 250, 20);
+		name.setBounds(200, 5, 250, 20);
 		
 		JLabel j2 = new JLabel("Category");
-		j2.setBounds(220, 35, 100, 20);
+		j2.setBounds(5, 35, 100, 20);
 		
 		category = new JTextField();
-		category.setBounds(320, 35, 250, 20);
+		category.setBounds(200, 35, 250, 20);
 		
 		JLabel j3 = new JLabel("Brand");
-		j3.setBounds(220, 65, 100, 20);
+		j3.setBounds(5, 65, 100, 20);
 		
 		brand = new JTextField();
-		brand.setBounds(320, 65, 250, 20);
+		brand.setBounds(200, 65, 250, 20);
 		
 		JLabel j4 = new JLabel("Price");
-		j4.setBounds(220, 95, 100, 20);
+		j4.setBounds(5, 95, 100, 20);
 		
 		price = new JTextField();
-		price.setBounds(320, 95, 250, 20);
+		price.setBounds(200, 95, 250, 20);
 		
 		JLabel j5 = new JLabel("Unit");
-		j5.setBounds(220, 125, 100, 20);
+		j5.setBounds(5, 125, 100, 20);
 		
 		unit = new JTextField();
-		unit.setBounds(320, 125, 250, 20);
+		unit.setBounds(200, 125, 250, 20);
+		
+		fileName = new JLabel();
+		fileName.setBounds(200, 160, 250, 20);
 		
 		img = new JLabel();
-		img.setBounds(320, 155, 250, 250);
+		img.setBounds(200, 190, 250, 250);
 		Image i = db.getImage("sample.jpg", img.getWidth(), img.getHeight());
 		img.setIcon(new ImageIcon(i));
 		
@@ -86,36 +87,36 @@ public class AddPanel extends JPanel implements ListSelectionListener{
 		add(j5);
 		add(unit);
 		add(img);
+		add(add);
+		add(upload);
+		add(fileName);
 	}
 	
-	public void initProductList() {
-		Product [] temp = db.getProducts();
-		
-		DefaultListModel<String> model = new DefaultListModel<String>();
-		
-		for(int i = 0; i < temp.length; i++) {
-			Product p = temp[i];
-			model.addElement(p.getId() + " " + p.getName());
+	public void actionPerformed(ActionEvent e){
+		if(e.getSource() == add) {
+			
 		}
 		
-		list = new JList<String>(model);
-	}
-
-	@Override
-	public void valueChanged(ListSelectionEvent e) {
-		if(! e.getValueIsAdjusting()) {
-			String selection = list.getSelectedValue();
-			String [] tokens = selection.split(" ");
-			int id = Integer.parseInt(tokens[0]);
-			Product p = db.getProduct(id);
+		else if(e.getSource() == upload) {
+			JFileChooser fc = new JFileChooser();
+			fc.showOpenDialog(null);
 			
-			name.setText(p.getName());
-			category.setText(p.getCategory() + "");
-			brand.setText(p.getBrand());
-			price.setText(p.getPrice() + "");
-			unit.setText(p.getUnit());
-			Image i = db.getImage(p.getImg(), img.getWidth(), img.getHeight());
-			img.setIcon(new ImageIcon(i));
+			try {
+				File file = fc.getSelectedFile();
+				String name = file.getName();
+				fileName.setText(name);
+				
+				if(name.endsWith(".jpg") || name.endsWith(".png")){
+					Image i = db.getImage(file, img.getWidth(), img.getHeight());
+					img.setIcon(new ImageIcon(i));
+				}
+				
+				else{
+					JOptionPane.showMessageDialog(null, "Invalid file. Please select a valid image file.");
+				}
+			} catch (Exception e2) {
+				System.out.println(e2.getMessage());
+			}
 		}
 	}
 }

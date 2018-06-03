@@ -20,8 +20,8 @@ public class Program {
 		frame.getContentPane().add(pane);
 		
 		addPanel = new AddPanel(db);
-		initializeEditPanel();
-		initializeListPanel();
+		listPanel = new ListPanel(db);
+		editPanel = new JPanel();
 		
 		pane.addTab("ADD", db.getIcon("plus.png"), addPanel);
 		pane.addTab("EDIT", db.getIcon("pencil.png"), editPanel);
@@ -34,13 +34,5 @@ public class Program {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setLocation(600, 250);
 		frame.setVisible(true);
-	}
-	
-	public void initializeEditPanel(){
-		editPanel = new JPanel();
-	}
-	
-	public void initializeListPanel(){
-		listPanel = new JPanel();
 	} 
 }

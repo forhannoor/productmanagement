@@ -163,4 +163,16 @@ public class Database {
 	public Image getImage(String name, int width, int height) {
 		return getImage(name).getScaledInstance(width, height, Image.SCALE_SMOOTH);
 	}
+	
+	public Image getImage(File file, int width, int height) {
+		Image img = null;
+		
+		try {
+			img = ImageIO.read(file);
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+		
+		return img.getScaledInstance(width, height, Image.SCALE_SMOOTH);
+	}
 }
