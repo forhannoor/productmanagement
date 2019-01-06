@@ -9,8 +9,12 @@ public class Program {
 	
 	private Database db;
 	
+	private final String PRODUCT_DB = "resources/db/products.db";
+	private final String CATEGORY_DB = "resources/db/categories.db";
+	private final String IMAGE_DB = "resources/img";
+	
 	public Program() {
-		db = new Database("resources/db/products.db", "resources/db/categories.db", "resources/img");
+		db = new Database(PRODUCT_DB, CATEGORY_DB, IMAGE_DB);
 		db.loadCategories();
 		db.loadProducts();
 		

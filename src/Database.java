@@ -15,11 +15,14 @@ public class Database {
 	private String imageDB;
 	private Product [] products;
 	private Category [] categories;
+	private Image defaultImage;
+	private final String DEFAULT_IMG = "pexels-photo-1549702.jpg";
 	
 	public Database(String productDB, String categoryDB, String imageDB) {
 		this.productDB = productDB;
 		this.categoryDB = categoryDB;
 		this.imageDB = imageDB;
+		defaultImage = getImage(DEFAULT_IMG);
 	}
 	
 	public void loadCategories()
