@@ -1,200 +1,200 @@
-product line,product type,product,description,stock,unit price,retail price,profit margin,
-Camping Equipment,Cooking Gear,TrailChef Deluxe Cook Set,n/a,489,121.94,146.33,20,
-Camping Equipment,Cooking Gear,TrailChef Double Flame,n/a,252,142.66,171.19,20,
-Camping Equipment,Tents,Star Dome,n/a,147,611.84,734.21,20,
-Camping Equipment,Tents,Star Gazer 2,n/a,303,547.47,656.96,20,
-Camping Equipment,Sleeping Bags,Hibernator Lite,n/a,1415,84.68,101.62,20,
-Camping Equipment,Sleeping Bags,Hibernator Extreme,n/a,352,249.23,299.08,20,
-Camping Equipment,Sleeping Bags,Hibernator Camp Cot,n/a,426,98.21,117.85,20,
-Camping Equipment,Lanterns,Firefly Lite,n/a,577,14.33,17.2,20,
-Camping Equipment,Lanterns,Firefly Extreme,n/a,189,49.70,59.64,20,
-Camping Equipment,Lanterns,EverGlow Single,n/a,579,33.50,40.2,20,
-Camping Equipment,Lanterns,EverGlow Butane,n/a,109,63.67,76.4,20,
-Mountaineering Equipment,Rope,Husky Rope 50,n/a,133,150.40,180.48,20,
-Mountaineering Equipment,Rope,Husky Rope 60,n/a,79,178.60,214.32,20,
-Mountaineering Equipment,Rope,Husky Rope 100,n/a,227,325.86,391.03,20,
-Mountaineering Equipment,Rope,Husky Rope 200,n/a,143,540.48,648.58,20,
-Mountaineering Equipment,Safety,Granite Climbing Helmet,n/a,898,69.56,83.47,20,
-Mountaineering Equipment,Safety,Husky Harness,n/a,559,61.10,73.32,20,
-Mountaineering Equipment,Safety,Husky Harness Extreme,n/a,352,103.40,124.08,20,
-Mountaineering Equipment,Safety,Granite Signal Mirror,n/a,126,32.34,38.81,20,
-Mountaineering Equipment,Climbing Accessories,Granite Carabiner,n/a,4022,3.76,4.51,20,
-Mountaineering Equipment,Climbing Accessories,Granite Belay,n/a,296,65.80,78.96,20,
-Mountaineering Equipment,Climbing Accessories,Granite Pulley,n/a,427,36.86,44.23,20,
-Mountaineering Equipment,Climbing Accessories,Firefly Climbing Lamp,n/a,464,38.79,46.55,20,
-Mountaineering Equipment,Climbing Accessories,Firefly Charger,n/a,710,51.40,61.68,20,
-Mountaineering Equipment,Climbing Accessories,Firefly Rechargeable Battery,n/a,1520,7.68,9.22,20,
-Mountaineering Equipment,Climbing Accessories,Granite Chalk Bag,n/a,262,17.64,21.17,20,
-Mountaineering Equipment,Tools,Granite Ice,n/a,333,75.20,90.24,20,
-Mountaineering Equipment,Tools,Granite Hammer,n/a,241,75.18,90.22,20,
-Mountaineering Equipment,Tools,Granite Shovel,n/a,164,58.19,69.83,20,
-Mountaineering Equipment,Tools,Granite Grip,n/a,523,19.40,23.28,20,
-Mountaineering Equipment,Tools,Granite Axe,n/a,856,38.40,46.08,20,
-Mountaineering Equipment,Tools,Granite Extreme,n/a,566,75.20,90.24,20,
-Personal Accessories,Watches,Mountain Man Extreme,n/a,23,282.60,339.12,20,
-Personal Accessories,Eyewear,Polar Sun,n/a,116,60.48,72.57,20,
-Personal Accessories,Eyewear,Polar Ice,n/a,37,103.40,124.08,20,
-Personal Accessories,Knives,Edge Extreme,n/a,275,112.51,135.01,20,
-Personal Accessories,Knives,Bear Survival Edge,n/a,97,86.75,104.1,20,
-Personal Accessories,Navigation,Glacier GPS Extreme,n/a,114,338.02,405.62,20,
-Outdoor Protection,Insect Repellents,BugShield Extreme,n/a,3801,6.58,7.9,20,
-Outdoor Protection,Sunscreen,Sun Shelter Stick,n/a,1179,4.85,5.82,20,
-Outdoor Protection,First Aid,Compact Relief Kit,n/a,180,22.54,27.05,20,
-Outdoor Protection,First Aid,Aloe Relief,n/a,136,5.23,6.28,20,
-Personal Accessories,Watches,Infinity,n/a,50,220.00,264,20,
-Personal Accessories,Watches,TX,n/a,72,194.50,233.4,20,
-Personal Accessories,Watches,Legend,n/a,58,240.12,288.14,20,
-Personal Accessories,Watches,Kodiak,n/a,66,120.30,144.36,20,
-Personal Accessories,Eyewear,Capri,n/a,283,38.30,45.96,20,
-Personal Accessories,Eyewear,Cat Eye,n/a,101,43.85,52.62,20,
-Personal Accessories,Eyewear,Dante,n/a,231,42.25,50.7,20,
-Personal Accessories,Eyewear,Fairway,n/a,409,20.15,24.18,20,
-Personal Accessories,Eyewear,Inferno,n/a,199,65.00,78,20,
-Personal Accessories,Eyewear,Maximus,n/a,113,82.52,99.03,20,
-Personal Accessories,Eyewear,Trendi,n/a,181,50.30,60.36,20,
-Personal Accessories,Eyewear,Zone,n/a,149,30.70,36.84,20,
-Personal Accessories,Knives,Max Gizmo,n/a,200,38.20,45.84,20,
-Personal Accessories,Knives,Pocket Gizmo,n/a,71,12.20,14.64,20,
-Personal Accessories,Binoculars,Ranger Vision,n/a,47,160.00,192,20,
-Personal Accessories,Navigation,Trail Master,n/a,3,365.00,438,20,
-Golf Equipment,Irons,Hailstorm Steel Irons,n/a,72,394.92,473.91,20,
-Golf Equipment,Irons,Hailstorm Titanium Irons,n/a,75,872.82,1047.38,20,
-Golf Equipment,Irons,Lady Hailstorm Steel Irons,n/a,32,500.79,600.95,20,
-Golf Equipment,Irons,Lady Hailstorm Titanium Irons,n/a,65,835.68,1002.82,20,
-Golf Equipment,Woods,Hailstorm Titanium Woods Set,n/a,89,1194.82,1433.78,20,
-Golf Equipment,Woods,Hailstorm Steel Woods Set,n/a,44,683.98,820.77,20,
-Golf Equipment,Woods,Lady Hailstorm Titanium Woods Set,n/a,27,1278.14,1533.77,20,
-Golf Equipment,Woods,Lady Hailstorm Steel Woods Set,n/a,62,856.17,1027.4,20,
-Golf Equipment,Putters,Course Pro Putter,n/a,349,72.25,86.7,20,
-Golf Equipment,Putters,Blue Steel Putter,n/a,112,84.62,101.54,20,
-Golf Equipment,Putters,Blue Steel Max Putter,n/a,236,169.79,203.75,20,
-Golf Equipment,Golf Accessories,Course Pro Golf and Tee Set,n/a,471,9.96,11.96,20,
-Golf Equipment,Golf Accessories,Course Pro Umbrella,n/a,492,12.01,14.42,20,
-Golf Equipment,Golf Accessories,Course Pro Golf Bag,n/a,42,205.05,246.05,20,
-Golf Equipment,Golf Accessories,Course Pro Gloves,n/a,1637,6.58,7.9,20,
-Camping Equipment,Cooking Gear,TrailChef Canteen,n/a,2063,8.77,10.52,20,
-Camping Equipment,Cooking Gear,TrailChef Kitchen Kit,n/a,3592,22.90,27.48,20,
-Camping Equipment,Cooking Gear,TrailChef Cup,n/a,6134,3.49,4.19,20,
-Camping Equipment,Cooking Gear,TrailChef Cook Set,n/a,1331,52.89,63.47,20,
-Camping Equipment,Cooking Gear,TrailChef Deluxe Cook Set,n/a,632,121.94,146.33,20,
-Camping Equipment,Cooking Gear,TrailChef Single Flame,n/a,360,62.76,75.31,20,
-Camping Equipment,Cooking Gear,TrailChef Kettle,n/a,17492,7.93,9.52,20,
-Camping Equipment,Cooking Gear,TrailChef Utensils,n/a,609,18.71,22.45,20,
-Camping Equipment,Tents,Star Dome,n/a,398,611.84,734.21,20,
-Camping Equipment,Tents,Star Gazer 2,n/a,302,547.47,656.96,20,
-Camping Equipment,Tents,Star Gazer 6,n/a,172,783.08,939.7,20,
-Camping Equipment,Tents,Star Peg,n/a,1129,2.00,2.4,20,
-Camping Equipment,Sleeping Bags,Hibernator Lite,n/a,601,84.68,101.62,20,
-Camping Equipment,Sleeping Bags,Hibernator,n/a,1160,138.02,165.62,20,
-Camping Equipment,Sleeping Bags,Hibernator Self - Inflating Mat,n/a,556,119.63,143.56,20,
-Camping Equipment,Sleeping Bags,Hibernator Pad,n/a,411,39.43,47.32,20,
-Camping Equipment,Sleeping Bags,Hibernator Pillow,n/a,2475,13.54,16.25,20,
-Camping Equipment,Sleeping Bags,Hibernator Camp Cot,n/a,1529,98.21,117.85,20,
-Camping Equipment,Packs,Canyon Mule Climber Backpack,n/a,951,73.38,88.06,20,
-Camping Equipment,Packs,Canyon Mule Weekender Backpack,n/a,1552,268.74,322.49,20,
-Camping Equipment,Packs,Canyon Mule Journey Backpack,n/a,676,348.61,418.33,20,
-Camping Equipment,Packs,Canyon Mule Cooler,n/a,1652,32.58,39.1,20,
-Camping Equipment,Packs,Canyon Mule Carryall,n/a,388,69.09,82.91,20,
-Camping Equipment,Lanterns,Firefly Lite,n/a,689,14.33,17.2,20,
-Camping Equipment,Lanterns,Firefly Mapreader,n/a,2027,15.83,18.99,20,
-Camping Equipment,Lanterns,Firefly 2,n/a,2899,26.44,31.73,20,
-Camping Equipment,Lanterns,Firefly 4,n/a,338,28.85,34.62,20,
-Camping Equipment,Lanterns,Firefly Multi-light,n/a,1536,25.90,31.08,20,
-Camping Equipment,Lanterns,EverGlow Single,n/a,603,33.50,40.2,20,
-Camping Equipment,Lanterns,EverGlow Double,n/a,158,51.11,61.33,20,
-Camping Equipment,Lanterns,EverGlow Butane,n/a,382,63.67,76.4,20,
-Camping Equipment,Lanterns,EverGlow Lamp,n/a,3903,26.91,32.29,20,
-Personal Accessories,Watches,Mountain Man Analog,n/a,592,47.41,56.89,20,
-Personal Accessories,Watches,Mountain Man Digital,n/a,476,34.87,41.85,20,
-Personal Accessories,Watches,Mountain Man Deluxe,n/a,102,76.66,91.99,20,
-Personal Accessories,Watches,Mountain Man Combination,n/a,59,94.09,112.91,20,
-Personal Accessories,Watches,Venue,n/a,801,72.28,86.73,20,
-Personal Accessories,Watches,Infinity,n/a,50,220.00,264,20,
-Personal Accessories,Watches,Lux,n/a,122,165.15,198.18,20,
-Personal Accessories,Watches,TX,n/a,498,190.29,228.35,20,
-Personal Accessories,Watches,Legend,n/a,325,255.15,306.18,20,
-Personal Accessories,Watches,Kodiak,n/a,202,121.02,145.22,20,
-Personal Accessories,Eyewear,Polar Sun,n/a,426,60.53,72.64,20,
-Personal Accessories,Eyewear,Polar Ice,n/a,200,104.18,125.01,20,
-Personal Accessories,Eyewear,Polar Sports,n/a,89,115.34,138.41,20,
-Personal Accessories,Eyewear,Polar Wave,n/a,53,94.57,113.49,20,
-Personal Accessories,Eyewear,Bella,n/a,133,67.50,81,20,
-Personal Accessories,Eyewear,Capri,n/a,1069,38.30,45.96,20,
-Personal Accessories,Eyewear,Cat Eye,n/a,1109,26.80,32.16,20,
-Personal Accessories,Eyewear,Dante,n/a,957,43.73,52.48,20,
-Personal Accessories,Eyewear,Fairway,n/a,1797,20.15,24.18,20,
-Personal Accessories,Eyewear,Inferno,n/a,582,65.00,78,20,
-Personal Accessories,Eyewear,Maximus,n/a,566,81.21,97.45,20,
-Personal Accessories,Eyewear,Trendi,n/a,427,50.30,60.36,20,
-Personal Accessories,Eyewear,Zone,n/a,4401,30.56,36.67,20,
-Personal Accessories,Eyewear,Hawk Eye,n/a,200,40.50,48.6,20,
-Personal Accessories,Knives,Bear Survival Edge,n/a,150,87.65,105.19,20,
-Personal Accessories,Knives,Max Gizmo,n/a,544,38.20,45.84,20,
-Personal Accessories,Knives,Pocket Gizmo,n/a,875,12.20,14.64,20,
-Personal Accessories,Binoculars,Seeker 35,n/a,634,98.97,118.76,20,
-Personal Accessories,Binoculars,Seeker 50,n/a,686,126.06,151.27,20,
-Personal Accessories,Binoculars,Opera Vision,n/a,138,110.00,132,20,
-Personal Accessories,Binoculars,Ranger Vision,n/a,92,160.00,192,20,
-Personal Accessories,Navigation,Glacier Basic,n/a,2257,31.26,37.52,20,
-Personal Accessories,Navigation,Glacier GPS,n/a,351,109.73,131.68,20,
-Personal Accessories,Navigation,Trail Scout,n/a,41,238.00,285.6,20,
-Outdoor Protection,Insect Repellents,BugShield Spray,n/a,2661,5.93,7.11,20,
-Outdoor Protection,Insect Repellents,BugShield Lotion Lite,n/a,2865,6.93,8.31,20,
-Outdoor Protection,Insect Repellents,BugShield Lotion,n/a,4637,6.83,8.19,20,
-Outdoor Protection,Sunscreen,Sun Blocker,n/a,2000,4.80,5.76,20,
-Outdoor Protection,Sunscreen,Sun Shelter 15,n/a,3267,4.80,5.76,20,
-Outdoor Protection,Sunscreen,Sun Shelter 30,n/a,7865,4.73,5.67,20,
-Outdoor Protection,Sunscreen,Sun Shield,n/a,2034,5.84,7,20,
-Outdoor Protection,First Aid,Compact Relief Kit,n/a,143,22.54,27.05,20,
-Outdoor Protection,First Aid,Deluxe Family Relief Kit,n/a,988,34.01,40.81,20,
-Outdoor Protection,First Aid,Calamine Relief,n/a,235,6.00,7.2,20,
-Outdoor Protection,First Aid,Aloe Relief,n/a,572,5.23,6.28,20,
-Outdoor Protection,First Aid,Insect Bite Relief,n/a,425,6.00,7.2,20,
-Golf Equipment,Irons,Hailstorm Steel Irons,n/a,691,363.37,436.04,20,
-Golf Equipment,Irons,Lady Hailstorm Steel Irons,n/a,332,500.79,600.95,20,
-Golf Equipment,Woods,Hailstorm Steel Woods Set,n/a,559,687.20,824.64,20,
-Golf Equipment,Woods,Lady Hailstorm Steel Woods Set,n/a,128,856.17,1027.4,20,
-Golf Equipment,Putters,Course Pro Putter,n/a,3430,72.25,86.7,20,
-Golf Equipment,Putters,Blue Steel Putter,n/a,1420,85.07,102.08,20,
-Golf Equipment,Golf Accessories,Course Pro Golf and Tee Set,n/a,3433,9.93,11.92,20,
-Golf Equipment,Golf Accessories,Course Pro Umbrella,n/a,3890,11.90,14.28,20,
-Golf Equipment,Golf Accessories,Course Pro Golf Bag,n/a,202,202.02,242.42,20,
-Golf Equipment,Golf Accessories,Course Pro Gloves,n/a,1386,10.32,12.39,20,
-Camping Equipment,Cooking Gear,TrailChef Cook Set,n/a,2610,51.94,62.33,20,
-Camping Equipment,Cooking Gear,TrailChef Deluxe Cook Set,n/a,1435,121.94,146.33,20,
-Camping Equipment,Cooking Gear,TrailChef Utensils,n/a,2973,18.29,21.95,20,
-Camping Equipment,Tents,Star Lite,n/a,3479,347.92,417.5,20,
-Camping Equipment,Tents,Star Gazer 2,n/a,1102,547.47,656.96,20,
-Camping Equipment,Tents,Star Gazer 3,n/a,572,636.41,763.69,20,
-Camping Equipment,Sleeping Bags,Hibernator Extreme,n/a,1399,249.23,299.08,20,
-Camping Equipment,Lanterns,Firefly Mapreader,n/a,2762,15.44,18.53,20,
-Camping Equipment,Lanterns,Firefly Extreme,n/a,648,49.70,59.64,20,
-Camping Equipment,Lanterns,EverGlow Single,n/a,1483,33.16,39.79,20,
-Personal Accessories,Knives,Single Edge,n/a,12121,12.01,14.41,20,
-Personal Accessories,Knives,Double Edge,n/a,2448,15.90,19.08,20,
-Personal Accessories,Knives,Bear Edge,n/a,957,39.01,46.82,20,
-Personal Accessories,Navigation,Glacier Deluxe,n/a,1068,90.65,108.78,20,
-Outdoor Protection,Insect Repellents,BugShield Natural,n/a,9305,5.66,6.79,20,
-Outdoor Protection,Sunscreen,Sun Shelter Stick,n/a,3130,4.70,5.64,20,
-Outdoor Protection,Sunscreen,Sun Shelter 15,n/a,11690,4.73,5.67,20,
-Outdoor Protection,Sunscreen,Sun Shield,n/a,4906,5.69,6.83,20,
-Outdoor Protection,First Aid,Compact Relief Kit,n/a,640,22.54,27.05,20,
-Camping Equipment,Cooking Gear,TrailChef Water Bag,n/a,8356,3.95,4.74,20,
-Camping Equipment,Cooking Gear,TrailChef Kitchen Kit,n/a,886,23.09,27.71,20,
-Camping Equipment,Cooking Gear,TrailChef Cup,n/a,1467,3.55,4.26,20,
-Camping Equipment,Cooking Gear,TrailChef Double Flame,n/a,240,142.66,171.19,20,
-Camping Equipment,Cooking Gear,TrailChef Utensils,n/a,1345,18.52,22.22,20,
-Camping Equipment,Sleeping Bags,Hibernator Lite,n/a,649,84.68,101.62,20,
-Camping Equipment,Sleeping Bags,Hibernator Extreme,n/a,312,249.23,299.08,20,
-Camping Equipment,Packs,Canyon Mule Extreme Backpack,n/a,129,432.89,519.47,20,
-Camping Equipment,Packs,Canyon Mule Carryall,n/a,529,69.09,82.91,20,
-Camping Equipment,Lanterns,Firefly Lite,n/a,610,14.33,17.2,20,
-Camping Equipment,Lanterns,Firefly Mapreader,n/a,759,15.80,18.96,20,
-Camping Equipment,Lanterns,EverGlow Kerosene,n/a,326,30.92,37.1,20,
-Camping Equipment,Lanterns,EverGlow Butane,n/a,125,63.67,76.4,20,
-Mountaineering Equipment,Rope,Husky Rope 50,n/a,139,150.40,180.48,20,
-Mountaineering Equipment,Rope,Husky Rope 200,n/a,61,540.48,648.58,20,
-Mountaineering Equipment,Safety,Granite Climbing Helmet,n/a,909,69.56,83.47,20,
-Mountaineering Equipment,Safety,Husky Harness,n/a,572,61.10,73.32,20,
-Mountaineering Equipment,Safety,Husky Harness Extreme,n/a,434,103.40,124.08,20,
-Mountaineering Equipment,Safety,Granite Signal Mirror,n/a,126,32.34,38.81,20,
+product line,product type,product title,description,stock,unit price,retail price,profit margin
+Camping Equipment,Cooking Gear,TrailChef Deluxe Cook Set,medium washable,489,121.94,146.33,20
+Camping Equipment,Cooking Gear,TrailChef Double Flame,medium washable,252,142.66,171.19,20
+Camping Equipment,Tents,Star Dome,medium washable,147,611.84,734.21,20
+Camping Equipment,Tents,Star Gazer 2,medium washable,303,547.47,656.96,20
+Camping Equipment,Sleeping Bags,Hibernator Lite,medium washable,1415,84.68,101.62,20
+Camping Equipment,Sleeping Bags,Hibernator Extreme,medium washable,352,249.23,299.08,20
+Camping Equipment,Sleeping Bags,Hibernator Camp Cot,medium washable,426,98.21,117.85,20
+Camping Equipment,Lanterns,Firefly Lite,medium washable,577,14.33,17.2,20
+Camping Equipment,Lanterns,Firefly Extreme,medium washable,189,49.7,59.64,20
+Camping Equipment,Lanterns,EverGlow Single,medium washable,579,33.5,40.2,20
+Camping Equipment,Lanterns,EverGlow Butane,medium washable,109,63.67,76.4,20
+Mountaineering Equipment,Rope,Husky Rope 50,medium washable,133,150.4,180.48,20
+Mountaineering Equipment,Rope,Husky Rope 60,medium washable,79,178.6,214.32,20
+Mountaineering Equipment,Rope,Husky Rope 100,medium washable,227,325.86,391.03,20
+Mountaineering Equipment,Rope,Husky Rope 200,medium washable,143,540.48,648.58,20
+Mountaineering Equipment,Safety,Granite Climbing Helmet,medium washable,898,69.56,83.47,20
+Mountaineering Equipment,Safety,Husky Harness,medium washable,559,61.1,73.32,20
+Mountaineering Equipment,Safety,Husky Harness Extreme,medium washable,352,103.4,124.08,20
+Mountaineering Equipment,Safety,Granite Signal Mirror,medium washable,126,32.34,38.81,20
+Mountaineering Equipment,Climbing Accessories,Granite Carabiner,medium washable,4022,3.76,4.51,20
+Mountaineering Equipment,Climbing Accessories,Granite Belay,medium washable,296,65.8,78.96,20
+Mountaineering Equipment,Climbing Accessories,Granite Pulley,medium washable,427,36.86,44.23,20
+Mountaineering Equipment,Climbing Accessories,Firefly Climbing Lamp,medium washable,464,38.79,46.55,20
+Mountaineering Equipment,Climbing Accessories,Firefly Charger,medium washable,710,51.4,61.68,20
+Mountaineering Equipment,Climbing Accessories,Firefly Rechargeable Battery,medium washable,1520,7.68,9.22,20
+Mountaineering Equipment,Climbing Accessories,Granite Chalk Bag,medium washable,262,17.64,21.17,20
+Mountaineering Equipment,Tools,Granite Ice,medium washable,333,75.2,90.24,20
+Mountaineering Equipment,Tools,Granite Hammer,medium washable,241,75.18,90.22,20
+Mountaineering Equipment,Tools,Granite Shovel,medium washable,164,58.19,69.83,20
+Mountaineering Equipment,Tools,Granite Grip,medium washable,523,19.4,23.28,20
+Mountaineering Equipment,Tools,Granite Axe,medium washable,856,38.4,46.08,20
+Mountaineering Equipment,Tools,Granite Extreme,medium washable,566,75.2,90.24,20
+Personal Accessories,Watches,Mountain Man Extreme,medium washable,23,282.6,339.12,20
+Personal Accessories,Eyewear,Polar Sun,medium washable,116,60.48,72.57,20
+Personal Accessories,Eyewear,Polar Ice,medium washable,37,103.4,124.08,20
+Personal Accessories,Knives,Edge Extreme,medium washable,275,112.51,135.01,20
+Personal Accessories,Knives,Bear Survival Edge,medium washable,97,86.75,104.1,20
+Personal Accessories,Navigation,Glacier GPS Extreme,medium washable,114,338.02,405.62,20
+Outdoor Protection,Insect Repellents,BugShield Extreme,medium washable,3801,6.58,7.9,20
+Outdoor Protection,Sunscreen,Sun Shelter Stick,medium washable,1179,4.85,5.82,20
+Outdoor Protection,First Aid,Compact Relief Kit,medium washable,180,22.54,27.05,20
+Outdoor Protection,First Aid,Aloe Relief,medium washable,136,5.23,6.28,20
+Personal Accessories,Watches,Infinity,medium washable,50,220,264,20
+Personal Accessories,Watches,TX,medium washable,72,194.5,233.4,20
+Personal Accessories,Watches,Legend,medium washable,58,240.12,288.14,20
+Personal Accessories,Watches,Kodiak,medium washable,66,120.3,144.36,20
+Personal Accessories,Eyewear,Capri,medium washable,283,38.3,45.96,20
+Personal Accessories,Eyewear,Cat Eye,medium washable,101,43.85,52.62,20
+Personal Accessories,Eyewear,Dante,medium washable,231,42.25,50.7,20
+Personal Accessories,Eyewear,Fairway,medium washable,409,20.15,24.18,20
+Personal Accessories,Eyewear,Inferno,medium washable,199,65,78,20
+Personal Accessories,Eyewear,Maximus,medium washable,113,82.52,99.03,20
+Personal Accessories,Eyewear,Trendi,medium washable,181,50.3,60.36,20
+Personal Accessories,Eyewear,Zone,medium washable,149,30.7,36.84,20
+Personal Accessories,Knives,Max Gizmo,medium washable,200,38.2,45.84,20
+Personal Accessories,Knives,Pocket Gizmo,medium washable,71,12.2,14.64,20
+Personal Accessories,Binoculars,Ranger Vision,medium washable,47,160,192,20
+Personal Accessories,Navigation,Trail Master,medium washable,3,365,438,20
+Golf Equipment,Irons,Hailstorm Steel Irons,medium washable,72,394.92,473.91,20
+Golf Equipment,Irons,Hailstorm Titanium Irons,medium washable,75,872.82,1047.38,20
+Golf Equipment,Irons,Lady Hailstorm Steel Irons,medium washable,32,500.79,600.95,20
+Golf Equipment,Irons,Lady Hailstorm Titanium Irons,medium washable,65,835.68,1002.82,20
+Golf Equipment,Woods,Hailstorm Titanium Woods Set,medium washable,89,1194.82,1433.78,20
+Golf Equipment,Woods,Hailstorm Steel Woods Set,medium washable,44,683.98,820.77,20
+Golf Equipment,Woods,Lady Hailstorm Titanium Woods Set,medium washable,27,1278.14,1533.77,20
+Golf Equipment,Woods,Lady Hailstorm Steel Woods Set,medium washable,62,856.17,1027.4,20
+Golf Equipment,Putters,Course Pro Putter,medium washable,349,72.25,86.7,20
+Golf Equipment,Putters,Blue Steel Putter,medium washable,112,84.62,101.54,20
+Golf Equipment,Putters,Blue Steel Max Putter,medium washable,236,169.79,203.75,20
+Golf Equipment,Golf Accessories,Course Pro Golf and Tee Set,medium washable,471,9.96,11.96,20
+Golf Equipment,Golf Accessories,Course Pro Umbrella,medium washable,492,12.01,14.42,20
+Golf Equipment,Golf Accessories,Course Pro Golf Bag,medium washable,42,205.05,246.05,20
+Golf Equipment,Golf Accessories,Course Pro Gloves,medium washable,1637,6.58,7.9,20
+Camping Equipment,Cooking Gear,TrailChef Canteen,medium washable,2063,8.77,10.52,20
+Camping Equipment,Cooking Gear,TrailChef Kitchen Kit,medium washable,3592,22.9,27.48,20
+Camping Equipment,Cooking Gear,TrailChef Cup,medium washable,6134,3.49,4.19,20
+Camping Equipment,Cooking Gear,TrailChef Cook Set,medium washable,1331,52.89,63.47,20
+Camping Equipment,Cooking Gear,TrailChef Deluxe Cook Set,medium washable,632,121.94,146.33,20
+Camping Equipment,Cooking Gear,TrailChef Single Flame,medium washable,360,62.76,75.31,20
+Camping Equipment,Cooking Gear,TrailChef Kettle,medium washable,17492,7.93,9.52,20
+Camping Equipment,Cooking Gear,TrailChef Utensils,medium washable,609,18.71,22.45,20
+Camping Equipment,Tents,Star Dome,medium washable,398,611.84,734.21,20
+Camping Equipment,Tents,Star Gazer 2,medium washable,302,547.47,656.96,20
+Camping Equipment,Tents,Star Gazer 6,medium washable,172,783.08,939.7,20
+Camping Equipment,Tents,Star Peg,medium washable,1129,2,2.4,20
+Camping Equipment,Sleeping Bags,Hibernator Lite,medium washable,601,84.68,101.62,20
+Camping Equipment,Sleeping Bags,Hibernator,medium washable,1160,138.02,165.62,20
+Camping Equipment,Sleeping Bags,Hibernator Self - Inflating Mat,medium washable,556,119.63,143.56,20
+Camping Equipment,Sleeping Bags,Hibernator Pad,medium washable,411,39.43,47.32,20
+Camping Equipment,Sleeping Bags,Hibernator Pillow,medium washable,2475,13.54,16.25,20
+Camping Equipment,Sleeping Bags,Hibernator Camp Cot,medium washable,1529,98.21,117.85,20
+Camping Equipment,Packs,Canyon Mule Climber Backpack,medium washable,951,73.38,88.06,20
+Camping Equipment,Packs,Canyon Mule Weekender Backpack,medium washable,1552,268.74,322.49,20
+Camping Equipment,Packs,Canyon Mule Journey Backpack,medium washable,676,348.61,418.33,20
+Camping Equipment,Packs,Canyon Mule Cooler,medium washable,1652,32.58,39.1,20
+Camping Equipment,Packs,Canyon Mule Carryall,medium washable,388,69.09,82.91,20
+Camping Equipment,Lanterns,Firefly Lite,medium washable,689,14.33,17.2,20
+Camping Equipment,Lanterns,Firefly Mapreader,medium washable,2027,15.83,18.99,20
+Camping Equipment,Lanterns,Firefly 2,medium washable,2899,26.44,31.73,20
+Camping Equipment,Lanterns,Firefly 4,medium washable,338,28.85,34.62,20
+Camping Equipment,Lanterns,Firefly Multi-light,medium washable,1536,25.9,31.08,20
+Camping Equipment,Lanterns,EverGlow Single,medium washable,603,33.5,40.2,20
+Camping Equipment,Lanterns,EverGlow Double,medium washable,158,51.11,61.33,20
+Camping Equipment,Lanterns,EverGlow Butane,medium washable,382,63.67,76.4,20
+Camping Equipment,Lanterns,EverGlow Lamp,medium washable,3903,26.91,32.29,20
+Personal Accessories,Watches,Mountain Man Analog,medium washable,592,47.41,56.89,20
+Personal Accessories,Watches,Mountain Man Digital,medium washable,476,34.87,41.85,20
+Personal Accessories,Watches,Mountain Man Deluxe,medium washable,102,76.66,91.99,20
+Personal Accessories,Watches,Mountain Man Combination,medium washable,59,94.09,112.91,20
+Personal Accessories,Watches,Venue,medium washable,801,72.28,86.73,20
+Personal Accessories,Watches,Infinity,medium washable,50,220,264,20
+Personal Accessories,Watches,Lux,medium washable,122,165.15,198.18,20
+Personal Accessories,Watches,TX,medium washable,498,190.29,228.35,20
+Personal Accessories,Watches,Legend,medium washable,325,255.15,306.18,20
+Personal Accessories,Watches,Kodiak,medium washable,202,121.02,145.22,20
+Personal Accessories,Eyewear,Polar Sun,medium washable,426,60.53,72.64,20
+Personal Accessories,Eyewear,Polar Ice,medium washable,200,104.18,125.01,20
+Personal Accessories,Eyewear,Polar Sports,medium washable,89,115.34,138.41,20
+Personal Accessories,Eyewear,Polar Wave,medium washable,53,94.57,113.49,20
+Personal Accessories,Eyewear,Bella,medium washable,133,67.5,81,20
+Personal Accessories,Eyewear,Capri,medium washable,1069,38.3,45.96,20
+Personal Accessories,Eyewear,Cat Eye,medium washable,1109,26.8,32.16,20
+Personal Accessories,Eyewear,Dante,medium washable,957,43.73,52.48,20
+Personal Accessories,Eyewear,Fairway,medium washable,1797,20.15,24.18,20
+Personal Accessories,Eyewear,Inferno,medium washable,582,65,78,20
+Personal Accessories,Eyewear,Maximus,medium washable,566,81.21,97.45,20
+Personal Accessories,Eyewear,Trendi,medium washable,427,50.3,60.36,20
+Personal Accessories,Eyewear,Zone,medium washable,4401,30.56,36.67,20
+Personal Accessories,Eyewear,Hawk Eye,medium washable,200,40.5,48.6,20
+Personal Accessories,Knives,Bear Survival Edge,medium washable,150,87.65,105.19,20
+Personal Accessories,Knives,Max Gizmo,medium washable,544,38.2,45.84,20
+Personal Accessories,Knives,Pocket Gizmo,medium washable,875,12.2,14.64,20
+Personal Accessories,Binoculars,Seeker 35,medium washable,634,98.97,118.76,20
+Personal Accessories,Binoculars,Seeker 50,medium washable,686,126.06,151.27,20
+Personal Accessories,Binoculars,Opera Vision,medium washable,138,110,132,20
+Personal Accessories,Binoculars,Ranger Vision,medium washable,92,160,192,20
+Personal Accessories,Navigation,Glacier Basic,medium washable,2257,31.26,37.52,20
+Personal Accessories,Navigation,Glacier GPS,medium washable,351,109.73,131.68,20
+Personal Accessories,Navigation,Trail Scout,medium washable,41,238,285.6,20
+Outdoor Protection,Insect Repellents,BugShield Spray,medium washable,2661,5.93,7.11,20
+Outdoor Protection,Insect Repellents,BugShield Lotion Lite,medium washable,2865,6.93,8.31,20
+Outdoor Protection,Insect Repellents,BugShield Lotion,medium washable,4637,6.83,8.19,20
+Outdoor Protection,Sunscreen,Sun Blocker,medium washable,2000,4.8,5.76,20
+Outdoor Protection,Sunscreen,Sun Shelter 15,medium washable,3267,4.8,5.76,20
+Outdoor Protection,Sunscreen,Sun Shelter 30,medium washable,7865,4.73,5.67,20
+Outdoor Protection,Sunscreen,Sun Shield,medium washable,2034,5.84,7,20
+Outdoor Protection,First Aid,Compact Relief Kit,medium washable,143,22.54,27.05,20
+Outdoor Protection,First Aid,Deluxe Family Relief Kit,medium washable,988,34.01,40.81,20
+Outdoor Protection,First Aid,Calamine Relief,medium washable,235,6,7.2,20
+Outdoor Protection,First Aid,Aloe Relief,medium washable,572,5.23,6.28,20
+Outdoor Protection,First Aid,Insect Bite Relief,medium washable,425,6,7.2,20
+Golf Equipment,Irons,Hailstorm Steel Irons,medium washable,691,363.37,436.04,20
+Golf Equipment,Irons,Lady Hailstorm Steel Irons,medium washable,332,500.79,600.95,20
+Golf Equipment,Woods,Hailstorm Steel Woods Set,medium washable,559,687.2,824.64,20
+Golf Equipment,Woods,Lady Hailstorm Steel Woods Set,medium washable,128,856.17,1027.4,20
+Golf Equipment,Putters,Course Pro Putter,medium washable,3430,72.25,86.7,20
+Golf Equipment,Putters,Blue Steel Putter,medium washable,1420,85.07,102.08,20
+Golf Equipment,Golf Accessories,Course Pro Golf and Tee Set,medium washable,3433,9.93,11.92,20
+Golf Equipment,Golf Accessories,Course Pro Umbrella,medium washable,3890,11.9,14.28,20
+Golf Equipment,Golf Accessories,Course Pro Golf Bag,medium washable,202,202.02,242.42,20
+Golf Equipment,Golf Accessories,Course Pro Gloves,medium washable,1386,10.32,12.39,20
+Camping Equipment,Cooking Gear,TrailChef Cook Set,medium washable,2610,51.94,62.33,20
+Camping Equipment,Cooking Gear,TrailChef Deluxe Cook Set,medium washable,1435,121.94,146.33,20
+Camping Equipment,Cooking Gear,TrailChef Utensils,medium washable,2973,18.29,21.95,20
+Camping Equipment,Tents,Star Lite,medium washable,3479,347.92,417.5,20
+Camping Equipment,Tents,Star Gazer 2,medium washable,1102,547.47,656.96,20
+Camping Equipment,Tents,Star Gazer 3,medium washable,572,636.41,763.69,20
+Camping Equipment,Sleeping Bags,Hibernator Extreme,medium washable,1399,249.23,299.08,20
+Camping Equipment,Lanterns,Firefly Mapreader,medium washable,2762,15.44,18.53,20
+Camping Equipment,Lanterns,Firefly Extreme,medium washable,648,49.7,59.64,20
+Camping Equipment,Lanterns,EverGlow Single,medium washable,1483,33.16,39.79,20
+Personal Accessories,Knives,Single Edge,medium washable,12121,12.01,14.41,20
+Personal Accessories,Knives,Double Edge,medium washable,2448,15.9,19.08,20
+Personal Accessories,Knives,Bear Edge,medium washable,957,39.01,46.82,20
+Personal Accessories,Navigation,Glacier Deluxe,medium washable,1068,90.65,108.78,20
+Outdoor Protection,Insect Repellents,BugShield Natural,medium washable,9305,5.66,6.79,20
+Outdoor Protection,Sunscreen,Sun Shelter Stick,medium washable,3130,4.7,5.64,20
+Outdoor Protection,Sunscreen,Sun Shelter 15,medium washable,11690,4.73,5.67,20
+Outdoor Protection,Sunscreen,Sun Shield,medium washable,4906,5.69,6.83,20
+Outdoor Protection,First Aid,Compact Relief Kit,medium washable,640,22.54,27.05,20
+Camping Equipment,Cooking Gear,TrailChef Water Bag,medium washable,8356,3.95,4.74,20
+Camping Equipment,Cooking Gear,TrailChef Kitchen Kit,medium washable,886,23.09,27.71,20
+Camping Equipment,Cooking Gear,TrailChef Cup,medium washable,1467,3.55,4.26,20
+Camping Equipment,Cooking Gear,TrailChef Double Flame,medium washable,240,142.66,171.19,20
+Camping Equipment,Cooking Gear,TrailChef Utensils,medium washable,1345,18.52,22.22,20
+Camping Equipment,Sleeping Bags,Hibernator Lite,medium washable,649,84.68,101.62,20
+Camping Equipment,Sleeping Bags,Hibernator Extreme,medium washable,312,249.23,299.08,20
+Camping Equipment,Packs,Canyon Mule Extreme Backpack,medium washable,129,432.89,519.47,20
+Camping Equipment,Packs,Canyon Mule Carryall,medium washable,529,69.09,82.91,20
+Camping Equipment,Lanterns,Firefly Lite,medium washable,610,14.33,17.2,20
+Camping Equipment,Lanterns,Firefly Mapreader,medium washable,759,15.8,18.96,20
+Camping Equipment,Lanterns,EverGlow Kerosene,medium washable,326,30.92,37.1,20
+Camping Equipment,Lanterns,EverGlow Butane,medium washable,125,63.67,76.4,20
+Mountaineering Equipment,Rope,Husky Rope 50,medium washable,139,150.4,180.48,20
+Mountaineering Equipment,Rope,Husky Rope 200,medium washable,61,540.48,648.58,20
+Mountaineering Equipment,Safety,Granite Climbing Helmet,medium washable,909,69.56,83.47,20
+Mountaineering Equipment,Safety,Husky Harness,medium washable,572,61.1,73.32,20
+Mountaineering Equipment,Safety,Husky Harness Extreme,medium washable,434,103.4,124.08,20
+Mountaineering Equipment,Safety,Granite Signal Mirror,medium washable,126,32.34,38.81,20
