@@ -15,7 +15,6 @@ public class Database {
 	public Database(String productDB, String imagePath) {
 		this.productDB = productDB;
 		this.imagePath = imagePath;
-		defaultImage = getImage(DEFAULT_IMG);
 	}
 	
 	// parse CSV file to initialize list of items
@@ -55,21 +54,7 @@ public class Database {
 		for(int i = 0; i< l; i++){ items[i].generateSku(); }
 	}
 	
-	// return ImageIcon given a file name
-	public ImageIcon getIcon(String name){
-		ImageIcon icon = null;
-		
-		try {
-			Image img = ImageIO.read(new File(imagePath + "/" + name));
-			icon = new ImageIcon(img);
-		} catch (Exception e) {
-			System.out.println(e.getMessage());
-		}
-		
-		return icon;
-	}
-	
-	// return Image given a file name
+	// return Image given filename
 	public Image getImage(String name){
 		Image img = null;
 		
@@ -82,20 +67,9 @@ public class Database {
 		return img;
 	}
 	
+	// return Image given filename and dimension
 	public Image getImage(String name, int width, int height) {
 		return getImage(name).getScaledInstance(width, height, Image.SCALE_SMOOTH);
-	}
-	
-	public Image getImage(File file, int width, int height) {
-		Image img = null;
-		
-		try {
-			img = ImageIO.read(file);
-		} catch (Exception e) {
-			System.out.println(e.getMessage());
-		}
-		
-		return img.getScaledInstance(width, height, Image.SCALE_SMOOTH);
 	}
 	
 	public Item [] getItems(){ return items; }
@@ -117,10 +91,19 @@ public class Database {
 	
 	// return default image
 	public Image getDefaultImage(){
+		if(defaultImage == null){
+			defaultImage = getImage(DEFAULT_IMG);
+		}
+		
 		return defaultImage;
 	}
 	
+	// return default image of specified dimension
 	public Image getDefaultImage(int width, int height){
+		if(defaultImage == null){
+			defaultImage = getDefaultImage();
+		}
+		
 		return defaultImage.getScaledInstance(width, height, Image.SCALE_SMOOTH);
 	}
 }
