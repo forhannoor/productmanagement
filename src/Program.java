@@ -14,27 +14,28 @@ public class Program {
 	
 	public Program() {
 		db = new Database(PRODUCT_DB, IMAGE_PATH);
-		db.loadInventory();
+		db.loadInventory(); // initialize list of items
+		db.generateSku(); // generate SKU for each item
 		
-		// frame = new JFrame();
+		frame = new JFrame();
 		
-		// JTabbedPane pane = new JTabbedPane();
-		// frame.getContentPane().add(pane);
+		JTabbedPane pane = new JTabbedPane();
+		frame.getContentPane().add(pane);
 		
-		// addPanel = new AddPanel(db);
-		// listPanel = new ListPanel(db);
-		// editPanel = new JPanel();
+		addPanel = new AddPanel(db);
+		listPanel = new ListPanel(db);
+		editPanel = new JPanel();
 		
-		// pane.addTab("ADD", db.getIcon("plus.png"), addPanel);
-		// pane.addTab("EDIT", db.getIcon("pencil.png"), editPanel);
-		// pane.addTab("LIST", db.getIcon("list.png"), listPanel);
+		pane.addTab("ADD", db.getIcon("plus.png"), addPanel);
+		pane.addTab("EDIT", db.getIcon("pencil.png"), editPanel);
+		pane.addTab("LIST", db.getIcon("list.png"), listPanel);
 		
-		// frame.setTitle("Product Management");
-		// frame.setIconImage(db.getImage("badge-4x.png"));
-		// frame.setSize(600, 600);
-		// frame.setResizable(false);
-		// frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		// frame.setLocation(600, 250);
-		// frame.setVisible(true);
+		frame.setTitle("Product Management");
+		frame.setIconImage(db.getImage("badge-4x.png"));
+		frame.setSize(600, 600);
+		frame.setResizable(false);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setLocation(600, 250);
+		frame.setVisible(true);
 	} 
 }

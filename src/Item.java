@@ -16,8 +16,9 @@ public class Item {
 		this.stock = stock;
 		this.retailPrice = retailPrice;
 		this.profitMargin = profitMargin / 100;
-		
-		// generate SKU
+	}
+	
+	public void generateSku(){
 		sb.setLength(0);
 		String [] tokens = productLine.split(" ");
 		
@@ -52,8 +53,6 @@ public class Item {
 	}
 	
 	public String getSku(){ return sku; }
-	
-	public void setSku(String p){ sku = p; }
 	
 	public String getProductLine(){ return productLine; }
 	

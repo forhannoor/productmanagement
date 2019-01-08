@@ -39,13 +39,20 @@ public class Database {
 				f = Double.parseDouble(s.next()); // unit price
 				g = Double.parseDouble(s.next()); // retail price
 				h = Double.parseDouble(s.next()); // profit margin
-				lst.add(new Item(a, b, new Product(c, d, f), e, h));
+				lst.add(new Item(a, b, new Product(c, d, f), e, g, h));
 			}
 			
 			items = lst.toArray(new Item [0]);
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
+	}
+	
+	// generate SKU for each items
+	public void generateSku(){
+		int l = items.length;
+		
+		for(int i = 0; i< l; i++){ items[i].generateSku(); }
 	}
 	
 	// return ImageIcon given a file name
@@ -89,5 +96,31 @@ public class Database {
 		}
 		
 		return img.getScaledInstance(width, height, Image.SCALE_SMOOTH);
+	}
+	
+	public Item [] getItems(){ return items; }
+	
+	// find and return item given SKU
+	public Item getItem(String s){
+		Item item = null;
+		int limit = items.length;
+		
+		for(int i = 0; i < limit; i++){
+			if(items[i].getSku().equals(s)){
+				item = items[i];
+				break;
+			}
+		}
+			
+		return item;
+	}
+	
+	// return default image
+	public Image getDefaultImage(){
+		return defaultImage;
+	}
+	
+	public Image getDefaultImage(int width, int height){
+		return defaultImage.getScaledInstance(width, height, Image.SCALE_SMOOTH);
 	}
 }

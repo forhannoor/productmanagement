@@ -21,7 +21,7 @@ public class ListPanel extends JPanel implements ListSelectionListener{
 	
 	public ListPanel(Database db) {
 		this.db = db;
-		initProductList();
+		initList();
 		initGui();
 	}
 	
@@ -68,7 +68,7 @@ public class ListPanel extends JPanel implements ListSelectionListener{
 		
 		img = new JLabel();
 		img.setBounds(320, 155, 250, 250);
-		Image i = db.getImage("sample.jpg", img.getWidth(), img.getHeight());
+		Image i = db.getDefaultImage(img.getWidth(), img.getHeight());
 		img.setIcon(new ImageIcon(i));
 		
 		add(j1);
@@ -84,14 +84,14 @@ public class ListPanel extends JPanel implements ListSelectionListener{
 		add(img);
 	}
 	
-	public void initProductList() {
-		Product [] temp = db.getProducts();
-		
+	// prepare list of items to display
+	public void initList() {
+		Item [] temp = db.getItems();
+		int limit = temp.length;
 		DefaultListModel<String> model = new DefaultListModel<String>();
 		
-		for(int i = 0; i < temp.length; i++) {
-			Product p = temp[i];
-			model.addElement(p.getId() + " " + p.getName());
+		for(int i = 0; i < limit; i++) {
+			model.addElement(temp[i].toString());
 		}
 		
 		list = new JList<String>(model);
@@ -100,18 +100,18 @@ public class ListPanel extends JPanel implements ListSelectionListener{
 	@Override
 	public void valueChanged(ListSelectionEvent e) {
 		if(! e.getValueIsAdjusting()) {
-			String selection = list.getSelectedValue();
-			String [] tokens = selection.split(" ");
-			int id = Integer.parseInt(tokens[0]);
-			Product p = db.getProduct(id);
+			// String selection = list.getSelectedValue();
+			// String [] tokens = selection.split(" ");
+			// int id = Integer.parseInt(tokens[0]);
+			// Product p = db.getProduct(id);
 			
-			name.setText(p.getName());
-			category.setText(p.getCategory() + "");
-			brand.setText(p.getBrand());
-			price.setText(p.getPrice() + "");
-			unit.setText(p.getUnit());
-			Image i = db.getImage(p.getImg(), img.getWidth(), img.getHeight());
-			img.setIcon(new ImageIcon(i));
+			// name.setText(p.getName());
+			// category.setText(p.getCategory() + "");
+			// brand.setText(p.getBrand());
+			// price.setText(p.getPrice() + "");
+			// unit.setText(p.getUnit());
+			// Image i = db.getImage(p.getImg(), img.getWidth(), img.getHeight());
+			// img.setIcon(new ImageIcon(i));
 		}
 	}
 }

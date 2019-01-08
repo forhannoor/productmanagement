@@ -73,7 +73,7 @@ public class AddPanel extends JPanel implements ActionListener{
 		
 		img = new JLabel();
 		img.setBounds(200, 190, 250, 250);
-		Image i = db.getImage("sample.jpg", img.getWidth(), img.getHeight());
+		Image i = db.getDefaultImage(img.getWidth(), img.getHeight());
 		img.setIcon(new ImageIcon(i));
 		
 		add(j1);
