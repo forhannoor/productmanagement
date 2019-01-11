@@ -19,10 +19,8 @@ public class Program {
 	private final String LIST_ICON = "list.png";
 	private final String FRAME_TITLE = "Product Management";
 	private final String FRAME_ICON = "badge-4x.png";
-	private final int FRAME_LOCATION_X = 600;
-	private final int FRAME_LOCATION_Y = 250;
-	private final int FRAME_WIDTH = 800;
-	private final int FRAME_HEIGHT = 800;
+	private final int FRAME_LOCATION = 200;
+	private final int FRAME_SIZE = 800;
 	
 	public Program() {
 		db = new Database(PRODUCT_DB, IMAGE_PATH);
@@ -38,16 +36,16 @@ public class Program {
 		listPanel = new ListPanel(db);
 		editPanel = new JPanel();
 		
-		pane.addTab("ADD", new ImageIcon(db.getImage(ADD_ICON)), addPanel);
-		pane.addTab("EDIT", new ImageIcon(db.getImage(EDIT_ICON)), editPanel);
-		pane.addTab("LIST", new ImageIcon(db.getImage(LIST_ICON)), listPanel);
+		pane.addTab("ADD", new ImageIcon(db.getImage(false, ADD_ICON)), addPanel);
+		pane.addTab("EDIT", new ImageIcon(db.getImage(false, EDIT_ICON)), editPanel);
+		pane.addTab("LIST", new ImageIcon(db.getImage(false, LIST_ICON)), listPanel);
 		
 		frame.setTitle(FRAME_TITLE);
-		frame.setIconImage(db.getImage(FRAME_ICON));
-		frame.setSize(FRAME_WIDTH, FRAME_HEIGHT);
+		frame.setIconImage(db.getImage(false, FRAME_ICON));
+		frame.setSize(FRAME_SIZE, FRAME_SIZE);
 		frame.setResizable(false);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setLocation(FRAME_LOCATION_X, FRAME_LOCATION_Y);
+		frame.setLocation(FRAME_LOCATION, FRAME_LOCATION);
 		frame.setVisible(true);
 	} 
 }

@@ -6,6 +6,7 @@ import java.io.File;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -46,15 +47,13 @@ public class AddPanel extends JPanel implements ActionListener{
 		profitMargin = new JTextField(WIDTH);
 
 		add = new JButton("ADD ITEM");
-		//add.setPreferredSize(new Dimension(WIDTH / 6, WIDTH / 2));
 		add.addActionListener(this);
 
 		upload = new JButton("SELECT PHOTO");
-		//upload.setPreferredSize(new Dimension(WIDTH / 6, WIDTH / 2));
 		upload.addActionListener(this);
 
 		img = new JLabel();
-		Image i = db.getDefaultImage();
+		Image i = db.loadDefaultImage();
 		img.setIcon(new ImageIcon(i));
 		
 		add(new JLabel("Product Line"));
@@ -82,28 +81,30 @@ public class AddPanel extends JPanel implements ActionListener{
 	}
 	
 	public void actionPerformed(ActionEvent e){
+		// add button action
 		if(e.getSource() == add) {
 			
 		}
 		
+		// upload button action
 		else if(e.getSource() == upload) {
 			JFileChooser fc = new JFileChooser();
-			fc.showOpenDialog(null);
+			fc.setFileFilter(new FileNameExtensionFilter("Image File", "jpg", "png"));
+			int returnVal = fc.showOpenDialog(null); // display file chooser dialog
+			fileToUpload = null;
+
+			if(returnVal == JFileChooser.APPROVE_OPTION) {
+			   fileToUpload = fc.getSelectedFile().getAbsolutePath();
+			}
 			
-			try {
-				File file = fc.getSelectedFile();
-				fileToUpload = file.getName();
-				
-				if(fileToUpload.endsWith(".jpg") || fileToUpload.endsWith(".png")){
-					Image i = db.getImage(file.getName(), img.getWidth(), img.getHeight());
-					img.setIcon(new ImageIcon(i));
+			if(fileToUpload != null){ // file is selected
+				if(db.hasValidExtension(fileToUpload)){ // file with valid extension
+					img.setIcon(new ImageIcon(db.getImage(true, fileToUpload, WIDTH, WIDTH)));
 				}
-				
-				else{
-					JOptionPane.showMessageDialog(null, "Invalid file. Please select a valid image file.");
+
+				else{ // file with invalid extension
+					JOptionPane.showMessageDialog(null, "Invalid file! Please select valid file.");
 				}
-			} catch (Exception e2) {
-				System.out.println(e2.getMessage());
 			}
 		}
 	}

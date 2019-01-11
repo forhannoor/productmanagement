@@ -10,11 +10,26 @@ public class Database {
 	private String imagePath;
 	private Item [] items;
 	private Image defaultImage;
+	private final String [] imageExtensions = {"jpg", "bmp", "png"};
 	private final String DEFAULT_IMG = "pexels-photo-1549702.jpeg";
 	
 	public Database(String productDB, String imagePath) {
 		this.productDB = productDB;
 		this.imagePath = imagePath;
+	}
+
+	public boolean hasValidExtension(String fileName){
+		boolean r = false;
+		int len = imageExtensions.length;
+
+		for(int i = 0; i < len; i++){
+			if(fileName.endsWith(imageExtensions[i]) || fileName.endsWith(imageExtensions[i].toUpperCase())){
+				r = true;
+				break;
+			}
+		}
+
+		return r;
 	}
 	
 	// parse CSV file to initialize list of items
@@ -54,12 +69,16 @@ public class Database {
 		for(int i = 0; i< l; i++){ items[i].generateSku(); }
 	}
 	
-	// return Image given filename
-	public Image getImage(String name){
+	// read and return image given filename
+	public Image getImage(boolean isNew, String name){
 		Image img = null;
+
+		if(! isNew){
+			name = imagePath + "\\" + name;
+		}
 		
 		try {
-			img = ImageIO.read(new File(imagePath + "/" + name));
+			img = ImageIO.read(new File(name));
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
@@ -67,9 +86,9 @@ public class Database {
 		return img;
 	}
 	
-	// return Image given filename and dimension
-	public Image getImage(String name, int width, int height) {
-		return getImage(name).getScaledInstance(width, height, Image.SCALE_SMOOTH);
+	// read and return image given filename and dimension
+	public Image getImage(boolean isNew, String name, int width, int height) {
+		return getImage(isNew, name).getScaledInstance(width, height, Image.SCALE_SMOOTH);
 	}
 	
 	public Item [] getItems(){ return items; }
@@ -90,18 +109,18 @@ public class Database {
 	}
 	
 	// return default image
-	public Image getDefaultImage(){
+	public Image loadDefaultImage(){
 		if(defaultImage == null){
-			defaultImage = getImage(DEFAULT_IMG);
+			defaultImage = getImage(false, DEFAULT_IMG);
 		}
 		
 		return defaultImage;
 	}
 	
 	// return default image of specified dimension
-	public Image getDefaultImage(int width, int height){
+	public Image loadDefaultImage(int width, int height){
 		if(defaultImage == null){
-			defaultImage = getDefaultImage();
+			defaultImage = loadDefaultImage();
 		}
 		
 		return defaultImage.getScaledInstance(width, height, Image.SCALE_SMOOTH);

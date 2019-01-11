@@ -68,7 +68,7 @@ public class ListPanel extends JPanel implements ListSelectionListener{
 		
 		img = new JLabel();
 		img.setBounds(320, 155, 250, 250);
-		Image i = db.getDefaultImage(img.getWidth(), img.getHeight());
+		Image i = db.loadDefaultImage(img.getWidth(), img.getHeight());
 		img.setIcon(new ImageIcon(i));
 		
 		add(j1);
