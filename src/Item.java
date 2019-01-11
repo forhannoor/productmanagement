@@ -7,7 +7,7 @@ public class Item {
 	private double retailPrice;
 	private double profitMargin;
 	
-	private static StringBuilder sb = new StringBuilder();
+	private static StringBuilder sb;
 	
 	public Item(String productLine, String productType, Product product, int stock, double retailPrice, double profitMargin){
 		this.productLine = productLine;
@@ -19,6 +19,10 @@ public class Item {
 	}
 	
 	public void generateSku(){
+		if(sb == null){
+			sb = new StringBuilder();
+		}
+		
 		sb.setLength(0);
 		String [] tokens = productLine.split(" ");
 		

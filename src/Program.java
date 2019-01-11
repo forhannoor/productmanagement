@@ -17,12 +17,12 @@ public class Program {
 	private final String ADD_ICON = "plus.png";
 	private final String EDIT_ICON = "pencil.png";
 	private final String LIST_ICON = "list.png";
-	private final String FRAME_TITLE = "Program Management";
+	private final String FRAME_TITLE = "Product Management";
 	private final String FRAME_ICON = "badge-4x.png";
 	private final int FRAME_LOCATION_X = 600;
 	private final int FRAME_LOCATION_Y = 250;
-	private final int FRAME_WIDTH = 600;
-	private final int FRAME_HEIGHT = 600;
+	private final int FRAME_WIDTH = 800;
+	private final int FRAME_HEIGHT = 800;
 	
 	public Program() {
 		db = new Database(PRODUCT_DB, IMAGE_PATH);

@@ -1,3 +1,4 @@
+import java.awt.Dimension;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -9,18 +10,23 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import net.miginfocom.swing.MigLayout;
 
 public class AddPanel extends JPanel implements ActionListener{
-	private JTextField name;
-	private JTextField category;
-	private JTextField brand;
-	private JTextField price;
-	private JTextField unit;
+	private JTextField productLine;
+	private JTextField productType;
+	private JTextField title;
+	private JTextField description;
+	private JTextField unitPrice;
+	private JTextField stock;
+	private JTextField retailPrice;
+	private JTextField profitMargin;
 	private JButton add;
 	private JButton upload;
 	private JLabel img;
-	private JLabel fileName;
 	private Database db;
+	private String fileToUpload; // holds the file name for item photo
+	private final int WIDTH = 120;
 	
 	public AddPanel(Database db) {
 		this.db = db;
@@ -28,68 +34,51 @@ public class AddPanel extends JPanel implements ActionListener{
 	}
 	
 	public void initGui(){
-		setLayout(null);
-		
-		add = new JButton("ADD");
-		add.setBounds(335, 450, 115, 30);
+		setLayout(new MigLayout("wrap 2"));
+
+		productLine = new JTextField(WIDTH);
+		productType = new JTextField(WIDTH);
+		title = new JTextField(WIDTH);
+		description = new JTextField(WIDTH);
+		unitPrice = new JTextField(WIDTH);
+		stock = new JTextField(WIDTH);
+		retailPrice = new JTextField(WIDTH);
+		profitMargin = new JTextField(WIDTH);
+
+		add = new JButton("ADD ITEM");
+		//add.setPreferredSize(new Dimension(WIDTH / 6, WIDTH / 2));
 		add.addActionListener(this);
-		
-		upload = new JButton("Browse");
-		upload.setBounds(200, 450, 115, 30);
+
+		upload = new JButton("SELECT PHOTO");
+		//upload.setPreferredSize(new Dimension(WIDTH / 6, WIDTH / 2));
 		upload.addActionListener(this);
-		
-		JLabel j1 = new JLabel("Name");
-		j1.setBounds(5, 5, 100, 20);
-		
-		name = new JTextField();
-		name.setBounds(200, 5, 250, 20);
-		
-		JLabel j2 = new JLabel("Category");
-		j2.setBounds(5, 35, 100, 20);
-		
-		category = new JTextField();
-		category.setBounds(200, 35, 250, 20);
-		
-		JLabel j3 = new JLabel("Brand");
-		j3.setBounds(5, 65, 100, 20);
-		
-		brand = new JTextField();
-		brand.setBounds(200, 65, 250, 20);
-		
-		JLabel j4 = new JLabel("Price");
-		j4.setBounds(5, 95, 100, 20);
-		
-		price = new JTextField();
-		price.setBounds(200, 95, 250, 20);
-		
-		JLabel j5 = new JLabel("Unit");
-		j5.setBounds(5, 125, 100, 20);
-		
-		unit = new JTextField();
-		unit.setBounds(200, 125, 250, 20);
-		
-		fileName = new JLabel();
-		fileName.setBounds(200, 160, 250, 20);
-		
+
 		img = new JLabel();
-		img.setBounds(200, 190, 250, 250);
-		Image i = db.getDefaultImage(img.getWidth(), img.getHeight());
+		Image i = db.getDefaultImage();
 		img.setIcon(new ImageIcon(i));
 		
-		add(j1);
-		add(name);
-		add(j2);
-		add(category);
-		add(j3);
-		add(brand);
-		add(j4);
-		add(price);
-		add(j5);
-		add(unit);
+		add(new JLabel("Product Line"));
+		add(productLine);
+		add(new JLabel("Product Type"));
+		add(productType);
+		add(new JLabel("Title"));
+		add(title);
+		add(new JLabel("Description"));
+		add(description);
+		add(new JLabel("Unit Price"));
+		add(unitPrice);
+		add(new JLabel("Stock"));
+		add(stock);
+		add(new JLabel("Retail Price"));
+		add(retailPrice);
+		add(new JLabel("Profit Margin"));
+		add(profitMargin);
+		add(new JLabel(""));
 		add(img);
-		add(add);
-		add(upload);
-		add(fileName);
+		add(new JLabel(""));
+		add(upload, "width 120:150:180");
+		add(new JLabel(""));
+		add(add, "width 120:150:180");
 	}
 	
 	public void actionPerformed(ActionEvent e){
@@ -103,11 +92,10 @@ public class AddPanel extends JPanel implements ActionListener{
 			
 			try {
 				File file = fc.getSelectedFile();
-				String name = file.getName();
-				fileName.setText(name);
+				fileToUpload = file.getName();
 				
-				if(name.endsWith(".jpg") || name.endsWith(".png")){
-					Image i = db.getImage(file, img.getWidth(), img.getHeight());
+				if(fileToUpload.endsWith(".jpg") || fileToUpload.endsWith(".png")){
+					Image i = db.getImage(file.getName(), img.getWidth(), img.getHeight());
 					img.setIcon(new ImageIcon(i));
 				}
 				
