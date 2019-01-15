@@ -38,7 +38,7 @@ public class Program {
 		JTabbedPane pane = new JTabbedPane();
 		frame.getContentPane().add(pane);
 		
-		addPanel = new AddPanel(db);
+		addPanel = new AddPanel(this);
 		listPanel = new ListPanel(db);
 		editPanel = new JPanel();
 		
@@ -57,8 +57,7 @@ public class Program {
 	}
 
 	// change font for parent and child components
-	public void changeFont(Component component, Font font)
-	{
+	public void changeFont(Component component, Font font){
 	    component.setFont (font);
 	    
 	    if (component instanceof Container){
@@ -67,4 +66,6 @@ public class Program {
 	        }
 	    }
 	}
+
+	public Database getDB(){ return db; }
 }

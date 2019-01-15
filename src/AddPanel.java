@@ -27,12 +27,14 @@ public class AddPanel extends JPanel implements ActionListener{
 	private JButton add;
 	private JButton upload;
 	private JLabel img;
-	private Database db;
+	private Program program;
 	private String fileToUpload; // holds the file name for item photo
 	private final int WIDTH = 120;
+	private final int IMG_WIDTH = WIDTH * 3;
+	private final int IMG_HEIGHT = WIDTH * 2;
 	
-	public AddPanel(Database db) {
-		this.db = db;
+	public AddPanel(Program p) {
+		program = p;
 		initGui();
 	}
 	
@@ -55,15 +57,14 @@ public class AddPanel extends JPanel implements ActionListener{
 		upload.addActionListener(this);
 
 		img = new JLabel();
-		img.setIcon(new ImageIcon(db.getSamplePhoto()));
+		img.setIcon(new ImageIcon(program.getDB().getSamplePhoto(IMG_WIDTH, IMG_HEIGHT)));
 
-		String textFieldHeight = "height " + WIDTH / 4 + ":" + WIDTH / 3 + ":" + WIDTH / 2;
-		String buttonWidth = "width " + WIDTH + ":" + WIDTH * 5 / 4 + ":" + WIDTH * 3 / 2;
+		String buttonWidth = "width " + WIDTH + ":" + WIDTH * 3 / 2 + ":" + WIDTH * 2;
 		
 		add(new JLabel("Product Line"));
-		add(productLine, textFieldHeight);
+		add(productLine);
 		add(new JLabel("Product Type"));
-		add(productType, textFieldHeight);
+		add(productType);
 		add(new JLabel("Title"));
 		add(title);
 		add(new JLabel("Description"));
@@ -92,6 +93,7 @@ public class AddPanel extends JPanel implements ActionListener{
 		
 		// upload button action
 		else if(e.getSource() == upload) {
+			Database db = program.getDB();
 			JFileChooser fc = new JFileChooser();
 			fc.setFileFilter(new FileNameExtensionFilter("Image File", "jpg", "png"));
 			int returnVal = fc.showOpenDialog(null); // display file chooser dialog
@@ -103,7 +105,7 @@ public class AddPanel extends JPanel implements ActionListener{
 			
 			if(fileToUpload != null){ // file is selected
 				if(db.hasValidExtension(fileToUpload)){ // file with valid extension
-					img.setIcon(new ImageIcon(db.getImage(fileToUpload, WIDTH, WIDTH)));
+					img.setIcon(new ImageIcon(db.getImage(fileToUpload, IMG_WIDTH, IMG_HEIGHT)));
 					db.saveImage(fileToUpload);
 				}
 

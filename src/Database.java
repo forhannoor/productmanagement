@@ -125,4 +125,6 @@ public class Database {
 	}
 
 	public Image getSamplePhoto(){ return samplePhoto; }
+
+	public Image getSamplePhoto(int width, int height){ return samplePhoto.getScaledInstance(width, height, Image.SCALE_SMOOTH); }
 }
