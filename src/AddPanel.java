@@ -1,4 +1,6 @@
+import java.awt.Component;
 import java.awt.Dimension;
+import java.awt.Font;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -36,7 +38,7 @@ public class AddPanel extends JPanel implements ActionListener{
 	
 	public void initGui(){
 		setLayout(new MigLayout("wrap 2"));
-
+		
 		productLine = new JTextField(WIDTH);
 		productType = new JTextField(WIDTH);
 		title = new JTextField(WIDTH);
@@ -54,11 +56,14 @@ public class AddPanel extends JPanel implements ActionListener{
 
 		img = new JLabel();
 		img.setIcon(new ImageIcon(db.getSamplePhoto()));
+
+		String textFieldHeight = "height " + WIDTH / 4 + ":" + WIDTH / 3 + ":" + WIDTH / 2;
+		String buttonWidth = "width " + WIDTH + ":" + WIDTH * 5 / 4 + ":" + WIDTH * 3 / 2;
 		
 		add(new JLabel("Product Line"));
-		add(productLine, "height 30:40:50");
+		add(productLine, textFieldHeight);
 		add(new JLabel("Product Type"));
-		add(productType, "height 30:40:50");
+		add(productType, textFieldHeight);
 		add(new JLabel("Title"));
 		add(title);
 		add(new JLabel("Description"));
@@ -74,11 +79,11 @@ public class AddPanel extends JPanel implements ActionListener{
 		add(new JLabel(""));
 		add(img);
 		add(new JLabel(""));
-		add(upload, "width 120:150:180");
+		add(upload, buttonWidth);
 		add(new JLabel(""));
-		add(add, "width 120:150:180");
+		add(add, buttonWidth);
 	}
-	
+
 	public void actionPerformed(ActionEvent e){
 		// add button action
 		if(e.getSource() == add) {

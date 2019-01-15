@@ -1,3 +1,6 @@
+import java.awt.Component;
+import java.awt.Container;
+import java.awt.Font;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
@@ -22,6 +25,7 @@ public class Program {
 	private final String SAMPLE_IMG = "pexels-photo-1549702.jpeg";
 	private final int FRAME_LOCATION_OFFSET = 200;
 	private final int FRAME_SIZE = 800;
+	private final Font FONT = new Font("SansSerif", Font.PLAIN, 16);
 	
 	public Program() {
 		db = new Database(PRODUCT_DB, IMAGE_PATH);
@@ -49,5 +53,18 @@ public class Program {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setLocation(FRAME_LOCATION_OFFSET, FRAME_LOCATION_OFFSET);
 		frame.setVisible(true);
-	} 
+		changeFont(frame, FONT);
+	}
+
+	// change font for parent and child components
+	public void changeFont(Component component, Font font)
+	{
+	    component.setFont (font);
+	    
+	    if (component instanceof Container){
+	        for(Component child : ((Container)component).getComponents()){
+	            changeFont(child, font);
+	        }
+	    }
+	}
 }
