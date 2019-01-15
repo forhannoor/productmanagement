@@ -1,6 +1,8 @@
 import java.awt.Image;
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.util.ArrayList;
+import java.util.regex.Pattern;
 import java.util.Scanner;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
@@ -9,9 +11,9 @@ public class Database {
 	private String productDB;
 	private String imagePath;
 	private Item [] items;
-	private Image defaultImage;
+	private Image samplePhoto;
 	private final String [] imageExtensions = {"jpg", "bmp", "png"};
-	private final String DEFAULT_IMG = "pexels-photo-1549702.jpeg";
+	private final String PRODUCT_PHOTOS = "product_photos";
 	
 	public Database(String productDB, String imagePath) {
 		this.productDB = productDB;
@@ -68,27 +70,37 @@ public class Database {
 		
 		for(int i = 0; i< l; i++){ items[i].generateSku(); }
 	}
-	
-	// read and return image given filename
-	public Image getImage(boolean isNew, String name){
+
+	// return image given filename
+	public Image getImage(String fileName){
 		Image img = null;
 
-		if(! isNew){
-			name = imagePath + "\\" + name;
-		}
-		
-		try {
-			img = ImageIO.read(new File(name));
-		} catch (Exception e) {
+		try{
+			img = ImageIO.read(new File(fileName));
+		} catch(Exception e){
 			System.out.println(e.getMessage());
 		}
-		
+
 		return img;
 	}
 	
-	// read and return image given filename and dimension
-	public Image getImage(boolean isNew, String name, int width, int height) {
-		return getImage(isNew, name).getScaledInstance(width, height, Image.SCALE_SMOOTH);
+	// return image given filename and dimension
+	public Image getImage(String name, int width, int height) {
+		return getImage(name).getScaledInstance(width, height, Image.SCALE_SMOOTH);
+	}
+
+	// read an image given file name and upload it into img directory
+	public void saveImage(String img){
+		try{
+			String separator = "\\";
+			String [] tokens = img.replaceAll(Pattern.quote(separator), "\\\\").split("\\\\");
+			File f = new File(img);
+			BufferedImage b = ImageIO.read(f);
+			f = new File(imagePath + "\\" + PRODUCT_PHOTOS + "\\" + tokens[tokens.length - 1]);
+			ImageIO.write(b, "png", f);
+		} catch(Exception e){
+			System.out.println(e.getMessage());
+		}
 	}
 	
 	public Item [] getItems(){ return items; }
@@ -107,22 +119,10 @@ public class Database {
 			
 		return item;
 	}
-	
-	// return default image
-	public Image loadDefaultImage(){
-		if(defaultImage == null){
-			defaultImage = getImage(false, DEFAULT_IMG);
-		}
-		
-		return defaultImage;
+
+	public void setSamplePhoto(String fileName){
+		samplePhoto = getImage(fileName);
 	}
-	
-	// return default image of specified dimension
-	public Image loadDefaultImage(int width, int height){
-		if(defaultImage == null){
-			defaultImage = loadDefaultImage();
-		}
-		
-		return defaultImage.getScaledInstance(width, height, Image.SCALE_SMOOTH);
-	}
+
+	public Image getSamplePhoto(){ return samplePhoto; }
 }

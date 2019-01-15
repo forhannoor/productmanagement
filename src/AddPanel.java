@@ -53,13 +53,12 @@ public class AddPanel extends JPanel implements ActionListener{
 		upload.addActionListener(this);
 
 		img = new JLabel();
-		Image i = db.loadDefaultImage();
-		img.setIcon(new ImageIcon(i));
+		img.setIcon(new ImageIcon(db.getSamplePhoto()));
 		
 		add(new JLabel("Product Line"));
-		add(productLine);
+		add(productLine, "height 30:40:50");
 		add(new JLabel("Product Type"));
-		add(productType);
+		add(productType, "height 30:40:50");
 		add(new JLabel("Title"));
 		add(title);
 		add(new JLabel("Description"));
@@ -99,7 +98,8 @@ public class AddPanel extends JPanel implements ActionListener{
 			
 			if(fileToUpload != null){ // file is selected
 				if(db.hasValidExtension(fileToUpload)){ // file with valid extension
-					img.setIcon(new ImageIcon(db.getImage(true, fileToUpload, WIDTH, WIDTH)));
+					img.setIcon(new ImageIcon(db.getImage(fileToUpload, WIDTH, WIDTH)));
+					db.saveImage(fileToUpload);
 				}
 
 				else{ // file with invalid extension
