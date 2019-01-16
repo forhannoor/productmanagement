@@ -26,6 +26,7 @@ public class Program {
 	private final int FRAME_LOCATION_OFFSET = 200;
 	private final int FRAME_SIZE = 800;
 	private final Font FONT = new Font("SansSerif", Font.PLAIN, 16);
+	private final Font LIST_FONT = new Font("monospaced", Font.PLAIN, 16);
 	
 	public Program() {
 		db = new Database(PRODUCT_DB, IMAGE_PATH);
@@ -39,7 +40,7 @@ public class Program {
 		frame.getContentPane().add(pane);
 		
 		addPanel = new AddPanel(this);
-		listPanel = new ListPanel(db);
+		listPanel = new ListPanel(this);
 		editPanel = new JPanel();
 		
 		pane.addTab("ADD", new ImageIcon(db.getImage(IMAGE_PATH + ADD_ICON)), addPanel);
@@ -54,6 +55,7 @@ public class Program {
 		frame.setLocation(FRAME_LOCATION_OFFSET, FRAME_LOCATION_OFFSET);
 		frame.setVisible(true);
 		changeFont(frame, FONT);
+		((ListPanel) listPanel).changeFont(LIST_FONT);
 	}
 
 	// change font for parent and child components

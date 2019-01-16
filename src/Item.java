@@ -6,6 +6,13 @@ public class Item {
 	private int stock;
 	private double retailPrice;
 	private double profitMargin;
+
+	private final int SKU_LENGTH = 20;
+	private final int TITLE_LENGTH = 50;
+	private final int STOCK_LENGTH = 8;
+	private final int UP_LENGTH = 8;
+	private final int RP_LENGTH = 8;
+	private final int PM_LENGTH = 8;
 	
 	private static StringBuilder sb;
 	
@@ -26,15 +33,27 @@ public class Item {
 		sb.setLength(0);
 		String [] tokens = productLine.split(" ");
 		
-		for(String t: tokens){
-			sb.append(t.charAt(0));
+		if(tokens.length == 1){
+			sb.append(tokens[0].charAt(0));
+			sb.append(tokens[0].charAt(1));
+		}
+
+		else{
+			sb.append(tokens[0].charAt(0));
+			sb.append(tokens[1].charAt(0));
 		}
 		
 		sb.append("-");
 		tokens = productType.split(" ");
 		
-		for(String t: tokens){
-			sb.append(t.charAt(0));
+		if(tokens.length == 1){
+			sb.append(tokens[0].charAt(0));
+			sb.append(tokens[0].charAt(1));
+		}
+
+		else{
+			sb.append(tokens[0].charAt(0));
+			sb.append(tokens[1].charAt(0));
 		}
 		
 		sb.append("-");
@@ -43,14 +62,7 @@ public class Item {
 		
 		for(String t: tokens){
 			sb.append("-");
-			
-			if(t.length() < 4){
-				sb.append(t);
-			}
-			
-			else{
-				sb.append(t.substring(0, 2));
-			}
+			sb.append(t.substring(0, 2));
 		}
 		
 		sku = sb.toString().toUpperCase();
@@ -82,5 +94,45 @@ public class Item {
 	
 	public void setProfitMargin(double p){ profitMargin = p; }
 	
-	public String toString(){ return sku + " " + productLine + " " + productType + " " + product + " " + stock + " " + retailPrice + " " + profitMargin; }
+	public String toString(){
+		int i, spaceCount;
+		sb.setLength(0);
+		sb.append(sku);
+		spaceCount = SKU_LENGTH - sku.length();
+
+		for(i = 0; i < spaceCount; i++){
+			sb.append(" ");
+		}
+
+		sb.append(product.getTitle());
+		spaceCount = TITLE_LENGTH - product.getTitle().length();
+
+		for(i = 0; i < spaceCount; i++){
+			sb.append(" ");
+		}
+
+		sb.append(stock);
+		spaceCount = STOCK_LENGTH - String.valueOf(stock).length();
+
+		for(i = 0; i < spaceCount; i++){
+			sb.append(" ");
+		}
+
+		sb.append(product.getUnitPrice());
+		spaceCount = UP_LENGTH - String.valueOf(product.getUnitPrice()).length();
+
+		for(i = 0; i < spaceCount; i++){
+			sb.append(" ");
+		}
+
+		sb.append(retailPrice);
+		spaceCount = RP_LENGTH - String.valueOf(retailPrice).length();
+
+		for(i = 0; i < spaceCount; i++){
+			sb.append(" ");
+		}
+
+		System.out.println(sb.toString());
+		return sb.toString();
+	}
 }
