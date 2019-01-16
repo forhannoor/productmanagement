@@ -1,10 +1,10 @@
 import java.awt.Component;
 import java.awt.Container;
 import java.awt.Font;
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
-import javax.swing.ImageIcon;
 
 public class Program {
 	private JFrame frame;
@@ -26,7 +26,7 @@ public class Program {
 	private final int FRAME_LOCATION_OFFSET = 200;
 	private final int FRAME_SIZE = 800;
 	private final Font FONT = new Font("SansSerif", Font.PLAIN, 16);
-	private final Font LIST_FONT = new Font("monospaced", Font.PLAIN, 16);
+	private final Font TABLE_FONT = new Font("monospaced", Font.PLAIN, 14);
 	
 	public Program() {
 		db = new Database(PRODUCT_DB, IMAGE_PATH);
@@ -55,7 +55,7 @@ public class Program {
 		frame.setLocation(FRAME_LOCATION_OFFSET, FRAME_LOCATION_OFFSET);
 		frame.setVisible(true);
 		changeFont(frame, FONT);
-		((ListPanel) listPanel).changeFont(LIST_FONT);
+		((ListPanel) listPanel).setTableFont(TABLE_FONT);
 	}
 
 	// change font for parent and child components

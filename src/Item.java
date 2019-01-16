@@ -6,14 +6,6 @@ public class Item {
 	private int stock;
 	private double retailPrice;
 	private double profitMargin;
-
-	private final int SKU_LENGTH = 20;
-	private final int TITLE_LENGTH = 50;
-	private final int STOCK_LENGTH = 8;
-	private final int UP_LENGTH = 8;
-	private final int RP_LENGTH = 8;
-	private final int PM_LENGTH = 8;
-	
 	private static StringBuilder sb;
 	
 	public Item(String productLine, String productType, Product product, int stock, double retailPrice, double profitMargin){
@@ -95,6 +87,7 @@ public class Item {
 	public void setProfitMargin(double p){ profitMargin = p; }
 	
 	public String toString(){
+		/*
 		int i, spaceCount;
 		sb.setLength(0);
 		sb.append(sku);
@@ -132,7 +125,7 @@ public class Item {
 			sb.append(" ");
 		}
 
-		System.out.println(sb.toString());
-		return sb.toString();
+		return sb.toString();*/
+		return sku + ", " + productLine + ", " + productType + ", " + product.getTitle() + ", " + stock + ", " + product.getUnitPrice() + ", " + retailPrice + ", " + profitMargin;
 	}
 }
