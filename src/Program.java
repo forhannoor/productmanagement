@@ -10,7 +10,6 @@ public class Program {
 	private JFrame frame;
 	
 	private JPanel addPanel;
-	private JPanel editPanel;
 	private JPanel listPanel;
 	
 	private Database db;
@@ -18,7 +17,6 @@ public class Program {
 	private final String PRODUCT_DB = "resources\\db\\inventory.csv";
 	private final String IMAGE_PATH = "resources\\img\\";
 	private final String ADD_ICON = "plus.png";
-	private final String EDIT_ICON = "pencil.png";
 	private final String LIST_ICON = "list.png";
 	private final String FRAME_TITLE = "Product Management";
 	private final String FRAME_ICON = "badge-4x.png";
@@ -39,13 +37,11 @@ public class Program {
 		JTabbedPane pane = new JTabbedPane();
 		frame.getContentPane().add(pane);
 		
-		addPanel = new AddPanel(this);
-		listPanel = new ListPanel(this);
-		editPanel = new JPanel();
+		addPanel = new AddPanel(db);
+		listPanel = new ListPanel(db);
 		
-		pane.addTab("ADD", new ImageIcon(db.getImage(IMAGE_PATH + ADD_ICON)), addPanel);
-		pane.addTab("EDIT", new ImageIcon(db.getImage(IMAGE_PATH + EDIT_ICON)), editPanel);
-		pane.addTab("LIST", new ImageIcon(db.getImage(IMAGE_PATH + LIST_ICON)), listPanel);
+		pane.addTab("New Item", new ImageIcon(db.getImage(IMAGE_PATH + ADD_ICON)), addPanel);
+		pane.addTab("Inventory", new ImageIcon(db.getImage(IMAGE_PATH + LIST_ICON)), listPanel);
 		
 		frame.setTitle(FRAME_TITLE);
 		frame.setIconImage(db.getImage(IMAGE_PATH + FRAME_ICON));

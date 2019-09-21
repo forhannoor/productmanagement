@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.regex.Pattern;
 import java.util.Scanner;
 import javax.imageio.ImageIO;
-import javax.swing.ImageIcon;
 
 public class Database {
 	private String productDB;
@@ -59,6 +58,7 @@ public class Database {
 			}
 			
 			items = lst.toArray(new Item [0]);
+			s.close();
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
@@ -103,7 +103,9 @@ public class Database {
 		}
 	}
 	
-	public Item [] getItems(){ return items; }
+	public Item [] getItems(){ 
+		return items; 
+	}
 	
 	// find and return item given SKU
 	public Item getItem(String s){

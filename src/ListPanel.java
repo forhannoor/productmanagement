@@ -1,7 +1,6 @@
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.Font;
-import java.awt.Image;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -14,11 +13,11 @@ import javax.swing.table.DefaultTableModel;
 import net.miginfocom.swing.MigLayout;
 
 public class ListPanel extends JPanel implements ActionListener{
+	private Database db;
 	private JTextField searchText;
 	private JButton searchBtn;
 	private JLabel img;
 	private JTable table;
-	private Program program;
 	private final int WIDTH = 120;
 	private final int IMG_WIDTH = WIDTH * 3;
 	private final int IMG_HEIGHT = WIDTH * 2;
@@ -27,10 +26,9 @@ public class ListPanel extends JPanel implements ActionListener{
 	private final int STOCK_LENGTH = 8;
 	private final int UP_LENGTH = 8;
 	private final int RP_LENGTH = 8;
-	private final int PM_LENGTH = 8;
 	
-	public ListPanel(Program p) {
-		program = p;
+	public ListPanel(Database db) {
+		this.db = db;
 		initGui();
 		initTable();
 	}
@@ -40,7 +38,7 @@ public class ListPanel extends JPanel implements ActionListener{
 		
 		searchText = new JTextField(WIDTH);
 
-		searchBtn = new JButton("SEARCH");
+		searchBtn = new JButton("Search");
 		searchBtn.addActionListener(this);
 
 		String [] columns = {"SKU", "Product", "Description", "Stock", "Price", "MRP", "Product Line", "Product Type"};
@@ -66,18 +64,14 @@ public class ListPanel extends JPanel implements ActionListener{
 		pane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
 		String paneProperty = "span 3, w " + WIDTH * 6.4 + ":" + WIDTH * 6.4 + ":" + WIDTH * 6.4  + ", h " + WIDTH * 4 + ":" + WIDTH * 4 + ":" + WIDTH * 5;
 		
-		img = new JLabel();
-		img.setIcon(new ImageIcon(program.getDB().getSamplePhoto(IMG_WIDTH, IMG_HEIGHT)));
-		
 		add(pane, paneProperty);
 		add(searchText);
 		add(searchBtn, "wrap");
-		add(img);
 	}
 	
 	// prepare list of items to display
 	public void initTable() {
-		Item [] items = program.getDB().getItems();
+		Item [] items = db.getItems();
 		int rowCount = items.length;
 		Item temp;
 		Product p;
@@ -102,8 +96,9 @@ public class ListPanel extends JPanel implements ActionListener{
 
 	@Override
 	public void actionPerformed(ActionEvent e){
+		// search button clicked event
 		if(e.getSource() == searchBtn){
-			String key = searchText.getText();
+			
 		}
 	}
 
