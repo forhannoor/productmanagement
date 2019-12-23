@@ -1,132 +1,88 @@
-import java.awt.image.BufferedImage;
+
+// Handles database operations, i.e. reading from and/or writing to a file.
+
 import java.awt.Image;
 import java.io.File;
+import java.nio.file.Files;
+import java.util.Arrays;
 import java.util.ArrayList;
-import java.util.regex.Pattern;
 import java.util.Scanner;
 import javax.imageio.ImageIO;
 
 public class Database {
-	private String productDB;
-	private String imagePath;
-	private Item [] items;
-	private Image samplePhoto;
-	private final String [] imageExtensions = {"jpg", "bmp", "png"};
-	private final String PRODUCT_PHOTOS = "product_photos";
-	
-	public Database(String productDB, String imagePath) {
-		this.productDB = productDB;
-		this.imagePath = imagePath;
-	}
+	// File to perform read/write operations.
+	// List of items in the inventory.
+	private ArrayList<Item> items;
+	private Scanner scanner;
+	private final int INI_SIZE = 50;
 
-	public boolean hasValidExtension(String fileName){
-		boolean r = false;
-		int len = imageExtensions.length;
-
-		for(int i = 0; i < len; i++){
-			if(fileName.endsWith(imageExtensions[i]) || fileName.endsWith(imageExtensions[i].toUpperCase())){
-				r = true;
-				break;
-			}
-		}
-
-		return r;
-	}
-	
-	// parse CSV file to initialize list of items
-	public void loadInventory(){
+	// Initializes list of items from file.
+	public void initializeItems(String fileName) {
 		try {
-			ArrayList <Item> lst = new ArrayList<Item>(50);
-			File file = new File(productDB);
-			Scanner s = new Scanner(file);
-			s.useDelimiter(",|\n");
-			s.nextLine();
-			String a, b, c, d;
-			int e;
-			double f, g, h;
-			
-			while(s.hasNext()){
-				a = s.next(); // product line
-				b = s.next(); // product type
-				c = s.next(); // product title
-				d = s.next(); // product description
-				e = Integer.parseInt(s.next()); // stock 
-				f = Double.parseDouble(s.next()); // unit price
-				g = Double.parseDouble(s.next()); // retail price
-				h = Double.parseDouble(s.next()); // profit margin
-				lst.add(new Item(a, b, new Product(c, d, f), e, g, h));
+			var file = new File(fileName);
+			items = new ArrayList<Item>(INI_SIZE);
+			byte[] content = Files.readAllBytes(file.toPath());
+
+			for (byte b : content) {
+				System.out.print(b);
 			}
-			
-			items = lst.toArray(new Item [0]);
-			s.close();
-		} catch (Exception e) {
-			System.out.println(e.getMessage());
+//			scanner = new Scanner(file);
+//			String a, b, c, d;
+//			int e;
+//			double f, g, h;
+//			
+//			while(scanner.hasNext()){
+//				a = scanner.next(); // product line
+//				b = scanner.next(); // product type
+//				c = scanner.next(); // product title
+//				d = scanner.next(); // product description
+//				e = Integer.parseInt(scanner.next()); // stock 
+//				f = Double.parseDouble(scanner.next()); // unit price
+//				g = Double.parseDouble(scanner.next()); // retail price
+//				h = Double.parseDouble(scanner.next()); // profit margin
+////				lst.add(new Item(a, b, new Product(c, d, f), e, g, h));
+//			}
+//			
+//			items = lst.toArray(new Item [0]);
+//			scanner.close();
+		} catch (Exception exception) {
+			exception.printStackTrace();
 		}
 	}
-	
-	// generate SKU for each items
-	public void generateSku(){
-		int l = items.length;
-		
-		for(int i = 0; i< l; i++){ items[i].generateSku(); }
+
+	public ArrayList<Item> getItems() {
+		return items;
 	}
 
-	// return image given filename
-	public Image getImage(String fileName){
+	// Finds an item with matching ID.
+	public Item findById(byte[] id) {
+		Item item = null;
+		int itemCount = items.size();
+
+		for (int i = 0; item == null && i < itemCount; ++i) {
+			if (Arrays.equals(id, items.get(i).getId())) {
+				item = items.get(i);
+			}
+		}
+
+		return item;
+	}
+
+	// Returns an image given filename.
+	public Image getImage(String fileName) {
 		Image img = null;
 
-		try{
+		try {
 			img = ImageIO.read(new File(fileName));
-		} catch(Exception e){
+		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
 
 		return img;
 	}
-	
-	// return image given filename and dimension
+
+	// Return an image given filename and dimension.
 	public Image getImage(String name, int width, int height) {
 		return getImage(name).getScaledInstance(width, height, Image.SCALE_SMOOTH);
 	}
-
-	// read an image given file name and upload it into img directory
-	public void saveImage(String img){
-		try{
-			String separator = "\\";
-			String [] tokens = img.replaceAll(Pattern.quote(separator), "\\\\").split("\\\\");
-			File f = new File(img);
-			BufferedImage b = ImageIO.read(f);
-			f = new File(imagePath + "\\" + PRODUCT_PHOTOS + "\\" + tokens[tokens.length - 1]);
-			ImageIO.write(b, "png", f);
-		} catch(Exception e){
-			System.out.println(e.getMessage());
-		}
-	}
-	
-	public Item [] getItems(){ 
-		return items; 
-	}
-	
-	// find and return item given SKU
-	public Item getItem(String s){
-		Item item = null;
-		int limit = items.length;
-		
-		for(int i = 0; i < limit; i++){
-			if(items[i].getSku().equals(s)){
-				item = items[i];
-				break;
-			}
-		}
-			
-		return item;
-	}
-
-	public void setSamplePhoto(String fileName){
-		samplePhoto = getImage(fileName);
-	}
-
-	public Image getSamplePhoto(){ return samplePhoto; }
-
-	public Image getSamplePhoto(int width, int height){ return samplePhoto.getScaledInstance(width, height, Image.SCALE_SMOOTH); }
 }

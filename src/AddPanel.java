@@ -15,7 +15,6 @@ public class AddPanel extends JPanel implements ActionListener{
 	private JTextField unitPrice;
 	private JTextField stock;
 	private JTextField retailPrice;
-	private JTextField profitMargin;
 	private JButton add;
 	private final int WIDTH = 120;
 	
@@ -34,35 +33,39 @@ public class AddPanel extends JPanel implements ActionListener{
 		unitPrice = new JTextField(WIDTH);
 		stock = new JTextField(WIDTH);
 		retailPrice = new JTextField(WIDTH);
-		profitMargin = new JTextField(WIDTH);
 
 		add = new JButton("Save");
 		add.addActionListener(this);
 
 		String buttonWidth = "width " + WIDTH + ":" + WIDTH * 3 / 2 + ":" + WIDTH * 2;
-		
-		add(new JLabel("Product Line"));
+		var temp = new JLabel("Product Line");
+		add(temp);
 		add(productLine);
-		add(new JLabel("Product Type"));
+		temp = new JLabel("Product Type");
+		add(temp);
 		add(productType);
-		add(new JLabel("Title"));
+		temp = new JLabel("Title");
+		add(temp);
 		add(title);
-		add(new JLabel("Description"));
+		temp = new JLabel("Description");
+		add(temp);
 		add(description);
-		add(new JLabel("Unit Price"));
+		temp = new JLabel("Unit Price");
+		add(temp);
 		add(unitPrice);
-		add(new JLabel("Stock"));
+		temp = new JLabel("Stock");
+		add(temp);
 		add(stock);
-		add(new JLabel("Retail Price"));
+		temp = new JLabel("Retail Price");
+		add(temp);
 		add(retailPrice);
-		add(new JLabel("Profit Margin"));
-		add(profitMargin);
-		add(new JLabel(""));
+		temp = new JLabel(""); 
+		add(temp);
 		add(add, buttonWidth);
 	}
 
 	public void actionPerformed(ActionEvent e){
-		// add button clicked event
+		// Add button clicked action.
 		if(e.getSource() == add) {
 			
 		}
