@@ -81,8 +81,29 @@ public class Database {
 		return img;
 	}
 
-	// Return an image given filename and dimension.
+	// Returns an image given filename and dimension.
 	public Image getImage(String name, int width, int height) {
 		return getImage(name).getScaledInstance(width, height, Image.SCALE_SMOOTH);
+	}
+	
+	// Insert a new item or update an existing one in the items list.
+	public void SaveItem(Item item) {
+		byte [] id = item.getId();
+		int itemCount = items.size();
+		boolean isNew = true;
+
+		for (int i = 0; i < itemCount && isNew; ++i) {
+			// If existing item.
+			if (Arrays.equals(id, items.get(i).getId())) {
+				// Update item.
+				items.set(i, item);
+				isNew = false;
+			}
+		}
+		
+		// If new item.
+		if(isNew) {
+			items.add(item);
+		}
 	}
 }

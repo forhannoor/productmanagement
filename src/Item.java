@@ -11,6 +11,12 @@ public class Item {
 		this.product = product;
 		this.currentStock = currentStock;
 	}
+	
+	public Item(byte [] id, Product product, double currentStock) {
+		this.id = id;
+		this.product = product;
+		this.currentStock = currentStock;
+	}
 
 	public Product getProduct() {
 		return product;

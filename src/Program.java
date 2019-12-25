@@ -23,7 +23,7 @@ public class Program {
 	private final String ADD_ICON = "plus.png";
 	private final String LIST_ICON = "list.png";
 	private final String FRAME_TITLE = "Product Management";
-	private final String ADD_PANEL_TITLE = "New Item";
+	private final String ADD_PANEL_TITLE = "Add Item";
 	private final String LIST_PANEL_TITLE = "Inventory";
 	private final String FRAME_ICON = "badge-4x.png";
 	private final Font FONT = new Font("SansSerif", Font.PLAIN, 16);
@@ -31,6 +31,7 @@ public class Program {
 
 	public Program() {
 		db = new Database();
+		db.initializeItems(ITEMS_FILE);
 		frame = new JFrame();
 		var pane = new JTabbedPane();
 		frame.getContentPane().add(pane);
