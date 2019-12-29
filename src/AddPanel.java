@@ -87,12 +87,13 @@ public class AddPanel extends JPanel implements ActionListener, FocusListener{
 			String v = vendorPrice.getValue().toString();
 			String r = retailPrice.getValue().toString();
 			String s = stock.getValue().toString();
+			String message;
 			
 			// If user input is valid.
 			if(isValidInput(t, d, v, r, s)) {
-				double vPrice = Double.parseDouble(v);
-				double rPrice = Double.parseDouble(r);
-				double stk = Double.parseDouble(s);
+				var vPrice = Double.parseDouble(v);
+				var rPrice = Double.parseDouble(r);
+				var stk = Double.parseDouble(s);
 				Item item;
 				var product = new Product(t, d, vPrice, rPrice);
 				
@@ -100,18 +101,21 @@ public class AddPanel extends JPanel implements ActionListener, FocusListener{
 				if(i.length() > 0) {
 					var idInBytes = i.getBytes();
 					item = new Item(idInBytes, product, stk);
+					message = "Item updated!";
 				}
 				
 				// If ID is not available.
 				else {
 					item = new Item(product, stk);
+					message = "New item added!";
 				}
 				
-				
+				db.saveItem(item);
+				statusText(message);
 			}
 			
 			else {
-				status.setText("Invalid input!! Please check again.");
+				statusText("Invalid input!! Please check again.");
 			}
 		}
 	}
@@ -126,9 +130,9 @@ public class AddPanel extends JPanel implements ActionListener, FocusListener{
 		}
 		
 		try {
-			double vPrice = Double.parseDouble(v);
-			double rPrice = Double.parseDouble(r);
-			double stk = Double.parseDouble(s);
+			var vPrice = Double.parseDouble(v);
+			var rPrice = Double.parseDouble(r);
+			var stk = Double.parseDouble(s);
 		} catch (Exception exception) {
 			result = false;
 			exception.printStackTrace();
@@ -148,7 +152,7 @@ public class AddPanel extends JPanel implements ActionListener, FocusListener{
 	public void focusLost(FocusEvent arg0) {
 		// If ID lost focus.
 		if(arg0.getSource() == id) {
-			String i = id.getText();
+			var i = id.getText();
 			
 			// If ID is provided.
 			if(i.length() > 0) {
@@ -165,9 +169,17 @@ public class AddPanel extends JPanel implements ActionListener, FocusListener{
 				}
 				
 				else {
-					status.setText("Product not found!! Please verify the ID.");
+					statusText("Product not found!! Please verify the ID.");
 				}
 			}
 		}
+	}
+	
+	private void statusText(String message) {
+		status.setText(message);
+	}
+	
+	private void statusText(double message) {
+		status.setText(message + "");
 	}
 }

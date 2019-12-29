@@ -1,16 +1,17 @@
 
 // Main program that functions as a delegate between other programs.
-// Invokes appropriate methods, passes necessary information.
 
 import java.awt.Component;
 import java.awt.Container;
 import java.awt.Font;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
 
-public class Program {
+public class Program implements WindowListener{
 	private JFrame frame;
 	private JPanel addPanel;
 	private JPanel listPanel;
@@ -39,6 +40,7 @@ public class Program {
 		listPanel = new ListPanel(db);
 		pane.addTab(ADD_PANEL_TITLE, new ImageIcon(db.getImage(IMAGE_PATH + ADD_ICON)), addPanel);
 		pane.addTab(LIST_PANEL_TITLE, new ImageIcon(db.getImage(IMAGE_PATH + LIST_ICON)), listPanel);
+		frame.addWindowListener(this);
 		frame.setTitle(FRAME_TITLE);
 		frame.setIconImage(db.getImage(IMAGE_PATH + FRAME_ICON));
 		frame.setSize(FRAME_SIZE, FRAME_SIZE);
@@ -64,5 +66,28 @@ public class Program {
 	// Returns the database connection handler/link.
 	public Database getDatabaseHandler() {
 		return db;
+	}
+
+	@Override
+	public void windowActivated(WindowEvent arg0) {}
+
+	@Override
+	public void windowClosed(WindowEvent arg0) {}
+
+	@Override
+	public void windowDeactivated(WindowEvent arg0) {}
+
+	@Override
+	public void windowDeiconified(WindowEvent arg0) {}
+
+	@Override
+	public void windowIconified(WindowEvent arg0) {}
+
+	@Override
+	public void windowOpened(WindowEvent arg0) {}
+
+	@Override
+	public void windowClosing(WindowEvent arg0) {
+		db.saveInventory(ITEMS_FILE);
 	}
 }

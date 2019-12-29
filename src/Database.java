@@ -3,6 +3,7 @@
 
 import java.awt.Image;
 import java.io.File;
+import java.io.FileWriter;
 import java.nio.file.Files;
 import java.util.Arrays;
 import java.util.ArrayList;
@@ -15,6 +16,7 @@ public class Database {
 	private ArrayList<Item> items;
 	private Scanner scanner;
 	private final int INI_SIZE = 50;
+	private final String NEWLINE = "\n";
 
 	// Initializes list of items from file.
 	public void initializeItems(String fileName) {
@@ -87,7 +89,7 @@ public class Database {
 	}
 	
 	// Insert a new item or update an existing one in the items list.
-	public void SaveItem(Item item) {
+	public void saveItem(Item item) {
 		byte [] id = item.getId();
 		int itemCount = items.size();
 		boolean isNew = true;
@@ -104,6 +106,32 @@ public class Database {
 		// If new item.
 		if(isNew) {
 			items.add(item);
+		}
+	}
+	
+	// Invoked when program is closing.
+	// Writes all inventory information in a file.
+	public void saveInventory(String fileName) {
+		try {
+			int itemCount = items.size();
+			Item item;
+			Product product;
+			var fileWriter = new FileWriter(fileName);
+			
+			for(int i = 0; i < itemCount; ++i) {
+				item = items.get(i);
+				product = item.getProduct();
+				fileWriter.write(item.getId().hashCode() + NEWLINE);
+				fileWriter.write(product.getTitle() + NEWLINE);
+				fileWriter.write(product.getDescription() + NEWLINE);
+				fileWriter.write(product.getVendorPrice() + NEWLINE);
+				fileWriter.write(product.getRetailPrice() + NEWLINE);
+				fileWriter.write(item.getCurrentStock() + NEWLINE);
+			}
+			
+			fileWriter.close();
+		} catch (Exception exception) {
+			exception.printStackTrace();
 		}
 	}
 }
